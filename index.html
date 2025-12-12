@@ -88,27 +88,85 @@
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6">
                         <div class="mb-5 mb-lg-0 text-center text-lg-start">
-                            <h1 class="display-2 lh-1 mb-3" style="font-size:3em;">
+                            <h1
+                                class="display-2 lh-1 mb-3"
+                                style="font-size: 3em"
+                            >
                                 On-ramp,<br />Merchant Solutions<br />Off-ramp<br />Bank
                                 integration
                             </h1>
-                            <p class="lead fw-normal text-muted mb-5">
+                            <p class="lead fw-normal text-muted">
                                 End to end Payment Stablecoins (PSC)
                                 Distribution
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <img
-                            src="assets/img/hero.png"
-                            style="width: 500px; max-width: 80vw"
-                        />
+                        <div class="masthead-device-mockup">
+                            <svg
+                                class="circle"
+                                viewBox="0 0 100 100"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <defs>
+                                    <linearGradient
+                                        id="circleGradient"
+                                        gradientTransform="rotate(45)"
+                                    >
+                                        <stop
+                                            class="gradient-start-color"
+                                            offset="0%"
+                                        ></stop>
+                                        <stop
+                                            class="gradient-end-color"
+                                            offset="100%"
+                                        ></stop>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="50" cy="50" r="50"></circle>
+                            </svg>
+                            <svg
+                                class="shape-1 d-none d-sm-block"
+                                viewBox="0 0 240.83 240.83"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <rect
+                                    x="-32.54"
+                                    y="78.39"
+                                    width="305.92"
+                                    height="84.05"
+                                    rx="42.03"
+                                    transform="translate(120.42 -49.88) rotate(45)"
+                                ></rect>
+                                <rect
+                                    x="-32.54"
+                                    y="78.39"
+                                    width="305.92"
+                                    height="84.05"
+                                    rx="42.03"
+                                    transform="translate(-49.88 120.42) rotate(-45)"
+                                ></rect>
+                            </svg>
+                            <svg
+                                class="shape-2 d-none d-sm-block"
+                                viewBox="0 0 100 100"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <circle cx="50" cy="50" r="50"></circle>
+                            </svg>
+                            <img
+                                src="assets/img/hero.png"
+                                style="
+                                    z-index: 1;
+                                    width: 500px;
+                                    max-width: 80vw;
+                                "
+                            />
+                        </div>
                     </div>
                     <div class="powered-by">
                         <img src="assets/img/ethpar-logo.png" />
-                        <a href="https://www.ethpar.com/" target="_blank"
-                            >Powered by Ethpar</a
-                        >
+                        <a href="#ethpar">Powered by Ethpar</a>
                     </div>
                 </div>
             </div>
@@ -252,7 +310,7 @@
                             </svg>
                             <img
                                 src="assets/img/atm-front.png"
-                                style="z-index: 1; width: 300px"
+                                style="z-index: 1; width: 250px"
                             />
                         </div>
                     </div>
@@ -313,8 +371,8 @@
                         <h4 class="member-name">Victor Cook, Ph.D.</h4>
                         <p class="member-role">CTO</p>
                     </div>
-                    
-                   <div class="member">
+
+                    <div class="member">
                         <img
                             src="assets/img/team/julie.jpg"
                             alt="Julie Grimes Waldorf"
@@ -372,7 +430,7 @@
         </section>
 
         <!-- ETHPAR Section -->
-        <section class="ethpar-background py-5" id="ethpar">
+        <section class="bg-light py-5" id="ethpar">
             <div class="container px-4">
                 <div
                     class="row gx-5 align-items-center justify-content-center justify-content-lg-between"
@@ -390,23 +448,21 @@
                     <div
                         class="col-12 col-md-10 col-lg-6 text-center text-lg-start"
                     >
-                        <h2 class="display-4 lh-1 mb-4 text-white">
-                            Powered by ETHPAR
-                        </h2>
-                        <p class="lead fw-normal text-white mb-4 mb-lg-0">
+                        <h2 class="display-4 lh-1 mb-4">Powered by ETHPAR</h2>
+                        <p class="lead fw-normal text-muted mb-4 mb-lg-0">
                             RampATM Merchant Services Inc. is built on top of
                             the Ethpar network, an Ethereum L1 fork engineered
                             specifically for stablecoins.
-                            <br />s such as node-level isolation, guaranteed
-                            wait-fre Leveraging Ethpar’s innovatione
-                            transactions, and stablecoin-based fees, RampATM
+                            <br />With features such as node-level isolation, guaranteed
+                            "wait free" transactions. Leveraging Ethpar’s innovatione
+                            transactions and stablecoin-based fees, RampATM
                             delivers a frictionless USAT distribution
                             experience.
                         </p>
 
                         <a href="https://www.ethpar.com/" target="_blank">
                             <button
-                                class="btn btn-light rounded-pill px-3 mt-4"
+                                class="btn btn-secondary rounded-pill px-3 mt-4"
                             >
                                 <span class="d-flex align-items-center">
                                     <i
