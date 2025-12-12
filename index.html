@@ -17,10 +17,17 @@
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
             rel="stylesheet"
         />
-        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
         <link href="css/index.css" rel="stylesheet" />
     </head>
     <body id="page-top">
+        <!-- Navigation Bar -->
         <nav
             class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm"
             id="mainNav"
@@ -63,6 +70,7 @@
             </div>
         </nav>
 
+        <!-- Hero Section -->
         <header class="masthead">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
@@ -131,14 +139,10 @@
                             >
                                 <circle cx="50" cy="50" r="50"></circle>
                             </svg>
-                            <div class="device-wrapper">
-                                <div
-                                    class="device"
-                                    data-device="AtmSide"
-                                    data-orientation="portrait"
-                                    data-color="black"
-                                ></div>
-                            </div>
+                            <img
+                                src="assets/img/atm-side.png"
+                                style="z-index: 1; width: 300px"
+                            />
                         </div>
                     </div>
                     <div class="powered-by">
@@ -151,7 +155,10 @@
             </div>
         </header>
 
-        <aside class="text-center bg-gradient-primary-to-secondary relative">
+        <!-- PSC Section -->
+        <aside
+            class="text-center bg-gradient-primary-to-secondary position-relative"
+        >
             <div class="container px-5">
                 <div class="row gx-5 justify-content-center">
                     <div class="col-xl-8">
@@ -165,10 +172,7 @@
                     </div>
                 </div>
             </div>
-            <img
-                src="assets/img/usa-stamp.png"
-                class="absolute w-96 h-96 -rotate-12 top-16 left-28 opacity-20"
-            />
+            <img class="usa-seal" src="assets/img/usa-stamp.png" />
         </aside>
 
         <section id="features">
@@ -287,14 +291,10 @@
                             >
                                 <circle cx="50" cy="50" r="50"></circle>
                             </svg>
-                            <div class="device-wrapper">
-                                <div
-                                    class="device"
-                                    data-device="AtmFront"
-                                    data-orientation="portrait"
-                                    data-color="black"
-                                ></div>
-                            </div>
+                            <img
+                                src="assets/img/atm-front.png"
+                                style="z-index: 1; width: 300px"
+                            />
                         </div>
                     </div>
                 </div>
@@ -329,156 +329,112 @@
         </section>
 
         <!-- Team section -->
-        <section>
+        <section class="team">
             <div class="team-content container px-5">
-                <h2 class="display-1 lh-1 mb-4">Leadership Team</h2>
-                <p class="lead fw-normal text-muted my-4 lg:w-1/2">
+                <h2 class="display-4 lh-1 mb-4">Leadership Team</h2>
+                <p class="team-desc lead fw-normal text-muted">
                     The RampATM team is made up of seasoned professionals with a
                     proven track record in financial services.
                 </p>
-                <div
-                    class="team-member-container grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center"
-                >
-                    <div
-                        class="member bg-gray-100 rounded w-48 pb-4 flex flex-col mt-5 ml-5 min-w-56"
-                    >
+                <div class="team-grid">
+                    <div class="member">
                         <img
-                            class="rounded-full object-cover w-32 h-2w-32 -mt-5 -ml-5 border-4 border-gray-100"
                             src="assets/img/team/victor.jpg"
                             alt="Victor Cook"
                         />
-                        <h4 class="mt-3 mb-0 text-left px-4 text-lg">
-                            Victor Cook, Ph.D.
-                        </h4>
-                        <p class="text-muted text-left px-4">
-                            CEO, Ethpar<br />CTO, RampATM
-                        </p>
+                        <h4 class="member-name">Victor Cook, Ph.D.</h4>
+                        <p class="member-role">CEO, Ethpar<br />CTO, RampATM</p>
                     </div>
 
-                    <div
-                        class="member bg-gray-100 rounded w-48 pb-4 flex flex-col mt-5 ml-5 min-w-56"
-                    >
+                    <div class="member">
                         <img
-                            class="rounded-full object-cover w-32 h-32 -mt-5 -ml-5 border-4 border-gray-100"
                             src="assets/img/team/sheldon.jpg"
                             alt="Sheldon Weisfeld"
                         />
-                        <h4 class="mt-3 mb-0 text-left px-4 text-lg">
-                            Sheldon Weisfeld
-                        </h4>
-                        <p class="text-muted text-left px-4">CEO, RampATM</p>
+                        <h4 class="member-name">Sheldon Weisfeld</h4>
+                        <p class="member-role">CEO, RampATM</p>
                     </div>
 
-                    <div
-                        class="member bg-gray-100 rounded w-48 pb-4 flex flex-col mt-5 ml-5 min-w-56"
-                    >
+                    <div class="member">
                         <img
-                            class="rounded-full object-cover w-32 h-32 -mt-5 -ml-5 border-4 border-gray-100"
                             src="assets/img/team/adel.jpg"
                             alt="Adel Elmessiry, Ph.D."
                         />
-                        <h4 class="mt-3 mb-0 text-left px-4 text-lg">
-                            Adel Elmessiry, Ph.D.
-                        </h4>
-                        <p class="text-muted text-left px-4">
-                            Advisor, RampATM
-                        </p>
+                        <h4 class="member-name">Adel Elmessiry, Ph.D.</h4>
+                        <p class="member-role">Advisor, RampATM</p>
                     </div>
 
-                    <div
-                        class="member bg-gray-100 rounded w-48 pb-4 flex flex-col mt-5 ml-5 min-w-56"
-                    >
+                    <div class="member">
                         <img
-                            class="rounded-full object-cover w-32 h-32 -mt-5 -ml-5 border-4 border-gray-100"
                             src="assets/img/team/jimmy.jpg"
                             alt="Jimmy Pandhi"
                         />
-                        <h4 class="mt-3 mb-0 text-left px-4 text-lg">
-                            Jimmy Pandhi
-                        </h4>
-                        <p class="text-muted text-left px-4">CFO, Ethpar</p>
+                        <h4 class="member-name">Jimmy Pandhi</h4>
+                        <p class="member-role">CFO, Ethpar</p>
                     </div>
 
-                    <div
-                        class="member bg-gray-100 rounded w-48 pb-4 flex flex-col mt-5 ml-5 min-w-56"
-                    >
+                    <div class="member">
                         <img
-                            class="rounded-full object-cover w-32 h-32 -mt-5 -ml-5 border-4 border-gray-100"
                             src="assets/img/team/julie.jpg"
                             alt="Julie Grimes Waldorf"
                         />
-                        <h4 class="mt-3 mb-0 text-left px-4 text-lg">
-                            Julie Grimes Waldorf
-                        </h4>
-                        <p class="text-muted text-left px-4">
-                            Esq Advisor, RampATM
-                        </p>
+                        <h4 class="member-name">Julie Grimes Waldorf</h4>
+                        <p class="member-role">Esq Advisor, RampATM</p>
                     </div>
 
-                    <div
-                        class="member bg-gray-100 rounded w-48 pb-4 flex flex-col mt-5 ml-5 min-w-56"
-                    >
+                    <div class="member">
                         <img
-                            class="rounded-full object-cover w-32 h-32 -mt-5 -ml-5 border-4 border-gray-100"
                             src="assets/img/team/frank.jpg"
                             alt="Frank Goldberg"
                         />
-                        <h4 class="mt-3 mb-0 text-left px-4 text-lg">
-                            Frank Goldberg
-                        </h4>
-                        <p class="text-muted text-left px-4">
-                            Lead Investor, RampATM
-                        </p>
+                        <h4 class="member-name">Frank Goldberg</h4>
+                        <p class="member-role">Lead Investor, RampATM</p>
                     </div>
 
-                    <div
-                        class="member bg-gray-100 rounded w-48 pb-4 flex flex-col mt-5 ml-5 min-w-56"
-                    >
+                    <div class="member">
                         <img
-                            class="rounded-full object-cover w-32 h-32 -mt-5 -ml-5 border-4 border-gray-100"
                             src="assets/img/team/placeholder.png"
                             alt="David Grieve"
                         />
-                        <h4 class="mt-3 mb-0 text-left px-4 text-lg">
-                            David Grieve
-                        </h4>
-                        <p class="text-muted text-left px-4">Advisor, Ethpar</p>
+                        <h4 class="member-name">David Grieve</h4>
+                        <p class="member-role">Advisor, Ethpar</p>
                     </div>
 
-                    <div
-                        class="member bg-gray-100 rounded w-48 pb-4 flex flex-col mt-5 ml-5 min-w-56"
-                    >
+                    <div class="member">
                         <img
-                            class="rounded-full object-cover w-32 h-32 -mt-5 -ml-5 border-4 border-gray-100"
                             src="assets/img/team/placeholder.png"
                             alt="Greg Tomaselli"
                         />
-                        <h4 class="mt-3 mb-0 text-left px-4 text-lg">
-                            Greg Tomaselli
-                        </h4>
-                        <p class="text-muted text-left px-4">Advisor, Ethpar</p>
+                        <h4 class="member-name">Greg Tomaselli</h4>
+                        <p class="member-role">Advisor, Ethpar</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="bg-light">
-            <div class="container px-5">
+        <!-- ETHPAR Section -->
+        <section class="ethpar-background py-5">
+            <div class="container px-4">
                 <div
                     class="row gx-5 align-items-center justify-content-center justify-content-lg-between"
                 >
-                    <div class="col-12 col-lg-5">
-                        <div class="px-5 px-sm-0">
-                            <img
-                                class="img-fluid h-80 object-contain opacity-75"
-                                src="https://www.ethpar.com/images/Ethpar_Logo.svg"
-                                alt="Ethpar network illustration"
-                            />
-                        </div>
+                    <div
+                        class="col-10 col-sm-8 col-md-6 col-lg-5 mb-4 mb-lg-0 text-center"
+                    >
+                        <img
+                            class="ethpar-mascot img-fluid"
+                            src="https://www.ethpar.com/images/Ethpar_Logo.svg"
+                            alt="Ethpar network illustration"
+                        />
                     </div>
-                    <div class="col-sm-8 col-md-6">
-                        <h2 class="display-4 lh-1 mb-4">Powered by ETHPAR</h2>
-                        <p class="lead fw-normal text-muted mb-5 mb-lg-0">
+
+                    <div
+                        class="col-12 col-md-10 col-lg-6 text-center text-lg-start"
+                    >
+                        <h2 class="display-4 lh-1 mb-4 text-white">
+                            Powered by ETHPAR
+                        </h2>
+                        <p class="lead fw-normal text-white mb-4 mb-lg-0">
                             RampATM is built on top of the Ethpar network, an
                             Ethereum L1 fork engineered specifically for
                             stablecoins.
@@ -510,6 +466,7 @@
                 </div>
             </div>
         </footer>
+
         <!-- Feedback Modal-->
         <div
             class="modal fade"
@@ -537,17 +494,7 @@
                         ></button>
                     </div>
                     <div class="modal-body border-0 p-4">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form
-                            id="contactForm"
-                            data-sb-form-api-token="API_TOKEN"
-                        >
+                        <form id="contactForm">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input
@@ -565,7 +512,6 @@
                                     A name is required.
                                 </div>
                             </div>
-                            <!-- Email address input-->
                             <div class="form-floating mb-3">
                                 <input
                                     class="form-control"
@@ -624,26 +570,14 @@
                                 </div>
                             </div>
                             <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
                                     <div class="fw-bolder">
                                         Form submission successful!
                                     </div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a
-                                        href="https://startbootstrap.com/solution/contact-forms"
-                                        >https://startbootstrap.com/solution/contact-forms</a
-                                    >
                                 </div>
                             </div>
                             <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage">
                                 <div class="text-center text-danger mb-3">
                                     Error sending message!
@@ -652,7 +586,7 @@
                             <!-- Submit Button-->
                             <div class="d-grid">
                                 <button
-                                    class="btn btn-primary rounded-pill btn-lg disabled"
+                                    class="btn btn-primary rounded-pill btn-lg"
                                     id="submitButton"
                                     type="submit"
                                 >
@@ -664,14 +598,11 @@
                 </div>
             </div>
         </div>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
