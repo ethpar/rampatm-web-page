@@ -169,6 +169,12 @@ h4,
     }
 }
 
+aside,
+section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
 .lead {
     font-size: 1.25rem;
     font-weight: 300;
