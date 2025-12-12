@@ -749,7 +749,7 @@ footer a:focus {
 }
 
 .ethpar-mascot {
-    width: 180px;
+    width: 100px;
     height: auto;
     object-fit: contain;
     max-width: 85%;
