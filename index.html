@@ -352,20 +352,84 @@
         <section class="team" id="team">
             <div class="team-content container px-5">
                 <h2 class="display-4 lh-1 mb-4">Leadership Team</h2>
-                <p class="team-desc lead fw-normal text-muted">
+                <p class="team-desc lead fw-normal text-muted mb-5">
                     The RampATM team is made up of seasoned professionals with a
                     proven track record in financial services.
                 </p>
-                <div class="team-grid">
-                    <div class="member">
-                        <img
-                            src="assets/img/team/sheldon.jpg"
-                            alt="Sheldon Weisfeld"
-                        />
-                        <h4 class="member-name">Sheldon Weisfeld</h4>
-                        <p class="member-role">CEO</p>
+                
+                <!-- CEO Message within Team Section -->
+                <div class="ceo-message-section mb-5 p-4 bg-light rounded-3">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-3 mb-4 mb-lg-0">
+                            <div class="text-center">
+                                <img 
+                                    src="assets/img/team/sheldon.jpg" 
+                                    alt="Sheldon Weisfeld, CEO"
+                                    class="rounded-circle mb-3"
+                                    style="width: 150px; height: 150px; object-fit: cover; border: 3px solid #f8f9fa;"
+                                />
+                                <h4 class="font-alt mb-1">Sheldon Weisfeld</h4>
+                                <p class="text-muted small mb-0">Chief Executive Officer</p>
+                                <p class="text-muted small mb-0">RampATM Merchant Services, Inc.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="ceo-message-content">
+                                <h3 class="h4 mb-3">A Message from Our CEO</h3>
+                                
+                                <h4 class="h6 mb-2 text-primary">RampATM - Overview</h4>
+                                
+                                <div class="text-muted mb-3">
+                                    <p class="mb-2">
+                                        RampATM lets people get stablecoins instantly at ATMs with no hassle.
+                                    </p>
+                                    
+                                    <div id="ceo-message-preview">
+                                        <p class="mb-2">
+                                            RampATM empowers consumers to use their debit card (already issued by any bank) at all our affiliated ATMs to purchase stablecoins with just the press of a button. The familiarity of using ATMs makes it simple for ordinary people to on-ramp to stablecoins, so customers can send funds around the world without the high fees and delays of the old financial system...
+                                        </p>
+                                        
+                                        <p class="mb-2">
+                                            RampATM only supports legal Payment Stablecoins (PSCs) as defined in the GENIUS Act. At the ATM, instead of pressing the button to withdraw cash, the customer selects a different button to get stablecoins. The ATM will print a bearer instrument "paper wallet" with keys to the customer's stablecoins and a QR code...
+                                        </p>
+                                    </div>
+                                    
+                                    <div id="ceo-message-full" style="display: none;">
+                                        <p class="mb-2">
+                                            RampATM empowers consumers to use their debit card (already issued by any bank) at all our affiliated ATMs to purchase stablecoins with just the press of a button. The familiarity of using ATMs makes it simple for ordinary people to on-ramp to stablecoins, so customers can send funds around the world without the high fees and delays of the old financial system, convert to bitcoin or any other digital asset and access endless DeFi opportunities.
+                                        </p>
+                                        
+                                        <p class="mb-2">
+                                            RampATM only supports legal Payment Stablecoins (PSCs) as defined in the GENIUS Act. At the ATM, instead of pressing the button to withdraw cash, the customer selects a different button to get stablecoins. The ATM will print a bearer instrument "paper wallet" with keys to the customer's stablecoins and a QR code. The customer can hold onto the bearer instrument like cash or use the QR code to transfer their stablecoins. No other method of on-ramping compares due to the widespread use and unique legal status of ATMs, with KYC (Know Your Customer documentation) already done by the bank that issued the debit card.
+                                        </p>
+                                        
+                                        <p class="mb-2">
+                                            RampATM accelerates mass adoption of stablecoins by removing barriers to customer acquisition for stablecoin issuers, wallets and exchanges, lowering costs and increasing speed/efficiency.
+                                        </p>
+                                        
+                                        <p class="mb-2">
+                                            In addition to our unique consumer ATM strategy, RampATM Merchant Services (RMS) has developed a gateway for transaction processing for businesses to accept stablecoins, reducing their high Visa/MasterCard transaction fees by as much as 88%. As part of our go-to market strategy, RMS has developed and runs on a high-speed Layer 1 Blockchain ETHPAR, purpose-built for Payment Stablecoin settlements. The ETHPAR whitepaper can be found at <a href="https://www.ethpar.com" target="_blank" class="text-primary">www.ethpar.com</a>.
+                                        </p>
+                                        
+                                        <p class="mb-2">
+                                            If your stablecoin partners with RampATM, we will help fulfill their patriotic duty to provide access in thousands of locations, becoming the dominant Payment Stablecoin. RampATM will drive mass market adoption and reduce barriers to entry.
+                                        </p>
+                                        
+                                        <p class="mb-2">
+                                            If you think of other beneficial partnerships for RampATM, we invite you to make additional introductions.
+                                        </p>
+                                    </div>
+                                    
+                                    <button class="btn btn-outline-primary btn-sm" id="read-more-btn" onclick="toggleCeoMessage()">
+                                        <span id="read-more-text">Read More</span>
+                                        <i class="bi bi-chevron-down ms-1" id="read-more-icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
+                </div>
+                <div class="team-grid">
                     <div class="member">
                         <img
                             src="assets/img/team/victor.jpg"
@@ -382,15 +446,6 @@
                         />
                         <h4 class="member-name">Julie Grimes Waldorf</h4>
                         <p class="member-role">Esq Advisor</p>
-                    </div>
-
-                    <div class="member">
-                        <img
-                            src="assets/img/team/jimmy.jpg"
-                            alt="Jimmy Pandhi"
-                        />
-                        <h4 class="member-name">Jimmy Pandhi</h4>
-                        <p class="member-role">CFO</p>
                     </div>
 
                     <div class="member">
@@ -634,5 +689,29 @@
 
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        
+        <!-- CEO Message Toggle Script -->
+        <script>
+            function toggleCeoMessage() {
+                const preview = document.getElementById('ceo-message-preview');
+                const full = document.getElementById('ceo-message-full');
+                const buttonText = document.getElementById('read-more-text');
+                const buttonIcon = document.getElementById('read-more-icon');
+                
+                if (full.style.display === 'none') {
+                    // Show full message
+                    preview.style.display = 'none';
+                    full.style.display = 'block';
+                    buttonText.textContent = 'Read Less';
+                    buttonIcon.className = 'bi bi-chevron-up ms-1';
+                } else {
+                    // Show preview
+                    preview.style.display = 'block';
+                    full.style.display = 'none';
+                    buttonText.textContent = 'Read More';
+                    buttonIcon.className = 'bi bi-chevron-down ms-1';
+                }
+            }
+        </script>
     </body>
 </html>
