@@ -50,7 +50,7 @@ Message:
 ${message}`
             )
 
-            const to = 'contact@ethpar.com'
+            const to = 'info@rampatm.com'
 
             window.location.href = `mailto:${to}?subject=${subject}&body=${body}`
         })
