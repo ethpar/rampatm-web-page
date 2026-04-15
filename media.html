@@ -307,5 +307,63 @@
 
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+        <!-- Signed URL API Script -->
+        <script>
+            async function getSignedUrl(videoKey, isThumbnail = false) {
+                try {
+                    const response = await fetch("https://rampatm-demos-api.netlify.app/api/presigned-url", {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ 
+                            videoKey: videoKey,
+                            isThumbnail: isThumbnail
+                        })
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    
+                    const data = await response.json();
+                    return data.url;
+                } catch (error) {
+                    console.error('Error fetching signed URL:', error);
+                    // Fallback to direct S3 URL if API fails
+                    return `https://rampatm-media.s3.us-east-1.amazonaws.com/${videoKey}`;
+                }
+            }
+
+            async function updateVideoWithSignedUrls() {
+                const videoElement = document.querySelector('video');
+                const sourceElement = document.querySelector('source');
+                
+                if (videoElement && sourceElement) {
+                    const videoKey = 'WesDunn-PAI-MP-2026_23.12.7.mp4';
+                    const thumbnailKey = 'WesDunn-PAI-MP-2026.png';
+                    
+                    // Get signed URLs
+                    const videoUrl = await getSignedUrl(videoKey, false);
+                    const thumbnailUrl = await getSignedUrl(thumbnailKey, true);
+                    
+                    // Update video source
+                    sourceElement.src = videoUrl;
+                    videoElement.poster = thumbnailUrl;
+                    
+                    // Reload video to apply new source
+                    videoElement.load();
+                    
+                    console.log('Updated video with signed URLs:', {
+                        videoUrl: videoUrl,
+                        thumbnailUrl: thumbnailUrl
+                    });
+                }
+            }
+
+            // Initialize when page loads
+            document.addEventListener('DOMContentLoaded', updateVideoWithSignedUrls);
+        </script>
     </body>
 </html>
