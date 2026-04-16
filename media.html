@@ -25,11 +25,6 @@
         />
         <link href="css/index.css" rel="stylesheet" />
         <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
             html, body {
                 height: 100%;
                 margin: 0;
@@ -95,7 +90,6 @@
             }
                         .video-card .card-body {
                 padding: 1.25rem;
-                padding-bottom: 0;
             }
             .video-card .card-title {
                 font-size: 1.1rem;
@@ -110,7 +104,35 @@
                 padding-top: 8rem;
                 padding-bottom: 3rem;
             }
-        </style>
+            .video-card .card-body .d-flex {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+            }
+            .video-card .card-body .btn-group {
+                display: flex !important;
+            }
+            .video-card .card-body .btn-group a {
+                display: inline-block !important;
+                padding: 0.25rem 0.5rem !important;
+                margin: 0 0.25rem !important;
+            }
+            .video-card .card-body small {
+                display: inline-block !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            .video-card .card-body .btn-group {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                white-space: nowrap !important;
+            }
+            .video-card .card-body {
+                display: flex !important;
+                flex-direction: column !important;
+                height: 100% !important;
+            }
+            </style>
     </head>
     <body id="page-top">
         <!-- Navigation Bar -->
@@ -200,35 +222,38 @@
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
-                            <div class="card-body d-flex flex-column h-100">
-                                <div>
-                                    <h5 class="card-title">Wes Dunn - PAI Market Partner Conference 2026 - March 3, 2026</h5>
-                                    <p class="card-text">Wes Dunn presentation at the PAI Market Partner Conference, held on March 8, 2026 at the Opal Sands Resort in Clearwater, Florida.</p>
-                                    <div class="alert alert-success py-2 mb-2">
-                                        <small class="fw-bold">
-                                            <i class="bi-star-fill me-1"></i>
-                                            Strategic Partnership Announcement: RampATM has been named a primary partner in driving stablecoin adoption and acceptance, while focusing on future-proofing legacy ATM infrastructure.
-                                        </small>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <h5 class="card-title mb-0">Wes Dunn - PAI Market Partner Conference 2026 - March 8, 2026</h5>
+                                        <a href="#" onclick="document.querySelector('video').currentTime = 800; document.querySelector('video').play(); return false;" class="btn btn-sm btn-outline-secondary" style="display: inline-block !important; visibility: visible !important; opacity: 1 !important;">
+                                            <i class="bi-clock-fill me-1"></i>
+                                            13:20
+                                        </a>
                                     </div>
+                                <p class="card-text">PAI, Powered by Brink's, is excited to announce the 2026 Market Partner Conference to see what's ahead for ATM innovation.</p>
+                                <div class="alert alert-success py-2 mb-2">
+                                    <small class="fw-bold">
+                                        <i class="bi-star-fill me-1"></i>
+                                        Strategic Partnership Announcement: RampATM has been named a primary partner in driving stablecoin adoption and acceptance, while focusing on future-proofing legacy ATM infrastructure.
+                                    </small>
                                 </div>
-                                <div class="mt-auto pb-3">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <small class="text-muted">
-                                            <i class="bi-geo-alt-fill me-1"></i>
-                                            <a href="https://www.opalsandsresort.com/" target="_blank" class="text-muted text-decoration-none">
-                                                Opal Sands Resort, Clearwater, Florida
-                                            </a>
-                                        </small>
-                                        <div class="btn-group" role="group">
-                                            <a href="https://www.linkedin.com/posts/pai-powered-by-brinks-is-excited-to-announce-share-7426746879021043712-6KCJ/" target="_blank" class="btn btn-sm btn-outline-primary">
-                                                <i class="bi-linkedin me-1"></i>
-                                                LinkedIn Post
-                                            </a>
-                                            <a href="#" onclick="document.querySelector('video').currentTime = 800; document.querySelector('video').play(); return false;" class="btn btn-sm btn-outline-secondary">
-                                                <i class="bi-clock-fill me-1"></i>
-                                                13:20
-                                            </a>
-                                        </div>
+                                <hr>
+                                <div class="d-flex justify-content-between align-items-center" style="display: flex !important; visibility: visible !important; opacity: 1 !important;">
+                                    <small class="text-muted" style="display: inline-block !important; visibility: visible !important; opacity: 1 !important;">
+                                        <i class="bi-geo-alt-fill me-1"></i>
+                                        <a href="https://www.opalsandsresort.com/" target="_blank" class="text-muted text-decoration-none" style="display: inline !important; visibility: visible !important; opacity: 1 !important;">
+                                            Opal Sands Resort, Clearwater, Florida
+                                        </a>
+                                    </small>
+                                    <div class="btn-group" role="group" style="display: inline-flex !important; visibility: visible !important; opacity: 1 !important;">
+                                        <a href="https://www.linkedin.com/posts/pai-powered-by-brinks-is-excited-to-announce-share-7426746879021043712-6KCJ/" target="_blank" class="btn btn-sm btn-outline-primary" style="display: inline-block !important; visibility: visible !important; opacity: 1 !important;">
+                                            <i class="bi-linkedin me-1"></i>
+                                            LinkedIn Post
+                                        </a>
+                                        <a href="https://gopai.com/market-partners-solutions/" target="_blank" class="btn btn-sm btn-outline-info" style="display: inline-block !important; visibility: visible !important; opacity: 1 !important;">
+                                            <i class="bi-globe me-1"></i>
+                                            Market Partners
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -243,38 +268,35 @@
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
-                            <div class="card-body d-flex flex-column h-100">
-                                <div>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <h5 class="card-title mb-0 me-2">Dubai Tech Tuesdays - February 3, 2026</h5>
-                                        <span class="badge bg-warning text-dark">Winner</span>
-                                    </div>
-                                    <p class="card-text">RampATM emerges victorious in the Dubai Tech Tuesdays pitch competition, showcasing innovative ATM solutions at the prestigious tech event hosted by @dubaitechtuesdays.</p>
-                                    <div class="alert alert-success py-2 mb-2">
-                                        <small class="fw-bold">
-                                            <i class="bi-trophy-fill me-1"></i>
-                                            Competition Achievement: RampATM wins the Dubai Tech Tuesdays pitch competition, demonstrating excellence in ATM innovation
-                                        </small>
-                                    </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <h5 class="card-title mb-0 me-2">Dubai Tech Tuesdays - February 3, 2026</h5>
+                                    <span class="badge bg-warning text-dark">Winner</span>
                                 </div>
-                                <div class="mt-auto pb-3">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <small class="text-muted">
-                                            <i class="bi-geo-alt-fill me-1"></i>
-                                            <a href="https://www.instagram.com/belcantodxb/" target="_blank" class="text-muted text-decoration-none">
-                                                Bel Canto Dubai
-                                            </a>
-                                        </small>
-                                        <div class="btn-group" role="group">
-                                            <a href="https://www.linkedin.com/company/dubaitechtuesdays/" target="_blank" class="btn btn-sm btn-outline-primary">
-                                                <i class="bi-linkedin me-1"></i>
-                                                Dubai Tech Tuesdays
-                                            </a>
-                                            <a href="https://www.instagram.com/dubaitechtuesdays/" target="_blank" class="btn btn-sm btn-outline-secondary">
-                                                <i class="bi-instagram me-1"></i>
-                                                Instagram
-                                            </a>
-                                        </div>
+                                <p class="card-text">RampATM emerges victorious in the Dubai Tech Tuesdays pitch competition, showcasing innovative ATM solutions at the prestigious tech event hosted by @dubaitechtuesdays.</p>
+                                <div class="alert alert-success py-2 mb-2">
+                                    <small class="fw-bold">
+                                        <i class="bi-trophy-fill me-1"></i>
+                                        Competition Achievement: RampATM wins the Dubai Tech Tuesdays pitch competition, demonstrating excellence in ATM innovation
+                                    </small>
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between align-items-center" style="display: flex !important; visibility: visible !important; opacity: 1 !important;">
+                                    <small class="text-muted" style="display: inline-block !important; visibility: visible !important; opacity: 1 !important;">
+                                        <i class="bi-geo-alt-fill me-1"></i>
+                                        <a href="https://www.instagram.com/belcantodxb/" target="_blank" class="text-muted text-decoration-none" style="display: inline !important; visibility: visible !important; opacity: 1 !important;">
+                                            Bel Canto Dubai
+                                        </a>
+                                    </small>
+                                    <div class="btn-group" role="group" style="display: inline-flex !important; visibility: visible !important; opacity: 1 !important;">
+                                        <a href="https://www.linkedin.com/company/dubaitechtuesdays/" target="_blank" class="btn btn-sm btn-outline-primary" style="display: inline-block !important; visibility: visible !important; opacity: 1 !important;">
+                                            <i class="bi-linkedin me-1"></i>
+                                            Dubai Tech Tuesdays
+                                        </a>
+                                        <a href="https://www.instagram.com/dubaitechtuesdays/" target="_blank" class="btn btn-sm btn-outline-secondary" style="display: inline-block !important; visibility: visible !important; opacity: 1 !important;">
+                                            <i class="bi-instagram me-1"></i>
+                                            Instagram
+                                        </a>
                                     </div>
                                 </div>
                             </div>
