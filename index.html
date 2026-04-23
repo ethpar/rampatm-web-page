@@ -24,6 +24,34 @@
             crossorigin="anonymous"
         />
         <link href="css/index.css" rel="stylesheet" />
+        <style>
+            .container {
+                padding-left: 3rem !important;
+                padding-right: 3rem !important;
+            }
+            .team {
+                margin-top: 4rem !important;
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+            }
+            .atm-image {
+                filter: drop-shadow(0 0 0 white) brightness(1.1) contrast(1.1);
+                background: transparent;
+            }
+            section {
+                margin-top: 5rem !important;
+                margin-bottom: 5rem !important;
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            #features {
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+            }
+            html {
+                scroll-padding-top: 80px;
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation Bar -->
@@ -327,9 +355,18 @@
         <section class="bg-light" id="network">
             <div class="container px-5">
                 <div
-                    class="row gx-5 align-items-center justify-content-center justify-content-lg-between"
+                    class="row gx-5 align-items-center justify-content-center"
                 >
-                    <div class="col-12 col-lg-5">
+                    <div class="col-md-4">
+                        <div class="text-center">
+                            <img
+                                class="img-fluid"
+                                src="assets/img/service-locations-map.png"
+                                alt="Service Locations Map"
+                            />
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
                         <h2 class="display-4 lh-1 mb-4">RampATM Network</h2>
                         <p class="lead fw-normal text-muted mb-5 mb-lg-0">
                             RampATM Merchant Services, Inc. operates differently
@@ -338,12 +375,13 @@
                             through a simple and secure process.
                         </p>
                     </div>
-                    <div class="col-sm-8 col-md-6">
-                        <div class="px-5 px-sm-0">
+                    <div class="col-md-4">
+                        <div class="text-center">
                             <img
-                                class="img-fluid"
-                                src="assets/img/service-locations-map.png"
-                                alt="..."
+                                src="assets/img/rampatm-atm.png"
+                                alt="RampATM Machine"
+                                class="atm-image"
+                                style="max-width: 120px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"
                             />
                         </div>
                     </div>
