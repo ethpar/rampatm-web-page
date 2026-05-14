@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account Deletion Request - Genius App</title>
+  <meta name="description" content="Request deletion of your Genius App account and personal data." />
+  <link rel="stylesheet" href="account-deletion.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo-wrap" href="#">
+        <img class="logo-img" src="https://placehold.co/32x32" alt="Genius App logo" width="32" height="32" />
+        <span class="logo-name">Genius App</span>
+      </a>
+      <nav class="header-nav">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-condition.html">Terms &amp; Conditions</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <div class="page-title">
+    <div class="page-title-inner">
+      <div class="doc-label">Account</div>
+      <h1>Account Deletion Request</h1>
+      <p class="subtitle">Submit a request to permanently delete your Genius App account and all associated personal data from our systems.</p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <main>
+    <div class="content">
+      <div class="content-inner">
+
+        <!-- How it works -->
+        <h2>How the deletion process works</h2>
+        <p>Once you submit your request, our team will verify the email address against our records and begin the deletion process. Here is what to expect at each stage:</p>
+
+        <ol class="steps">
+          <li class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <strong>Request received</strong>
+              <p>We log your deletion request and send an initial confirmation to your registered email address within a few minutes of submission.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong>Identity verification</strong>
+              <p>We verify that the email address you provide matches an active account in our system. If no match is found, we will notify you so you can resubmit with the correct address.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>Account deletion within 15 days</strong>
+              <p>Your account and all associated personal data will be permanently deleted from our systems within <strong>15 calendar days</strong> of your verified request. You will receive an email confirmation once the deletion is complete.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <strong>Data removed from all systems</strong>
+              <p>Upon completion, all personal information - including your account profile, usage data, and support history - will be permanently removed from our servers and from any third-party service providers we share data with in order to operate the Service.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="callout amber">
+          <h4>What is not affected by account deletion</h4>
+          <p>Deleting your account does not affect your self-custodial wallet or your Digital Assets. Your private keys and seed phrase remain solely in your control. Additionally, transaction data recorded on public blockchains is immutable and cannot be removed - this is an inherent property of blockchain technology outside our control. We are also required by law to retain certain transaction records for a minimum of five years for regulatory compliance purposes.</p>
+        </div>
+
+        <div class="callout blue">
+          <h4>You will receive progress updates</h4>
+          <p>We will keep you informed at each stage of the process via the email address associated with your account. Check your inbox - and your spam folder - for updates from us. If you have questions at any point, contact us at <a href="mailto:info@rampatm.com">info@rampatm.com</a>.</p>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- Form -->
+        <div class="form-card" id="form-card">
+
+          <!-- Form view -->
+          <div id="form-view">
+            <div class="form-card-title">Submit your deletion request</div>
+            <p class="form-card-desc">Enter the email address associated with your Genius App account. We will send a confirmation to that address once we have processed your request.</p>
+
+            <form id="deletion-form" novalidate>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  spellcheck="false"
+                />
+                <span class="field-error" id="email-error">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-confirm">
+                <input type="checkbox" id="confirm" name="confirm" />
+                <label for="confirm">I understand that account deletion is <strong>permanent and irreversible</strong>. All personal data associated with my account will be removed and I will lose access to my transaction history within the app.</label>
+              </div>
+
+              <button type="submit" class="btn-delete" id="submit-btn" disabled>
+                <span class="spinner" aria-hidden="true"></span>
+                <span class="btn-label">Request Account Deletion</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Success view -->
+          <div class="success-state" id="success-view" role="alert" aria-live="polite">
+            <div class="success-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <h3>Deletion request received</h3>
+            <p>A confirmation has been sent to</p>
+            <span class="success-email" id="success-email"></span>
+            <p>Your account and all personal data will be permanently deleted within <strong>15 calendar days</strong>. You will receive email updates as your request is processed.</p>
+            <p style="margin-top:.75rem;">If you have any questions, contact us at <a href="mailto:info@rampatm.com">info@rampatm.com</a>.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <img src="https://placehold.co/24x24" alt="Genius App" width="24" height="24" />
+        <span>Genius App</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-condition.html">Terms &amp; Conditions</a>
+        <a href="mailto:info@rampatm.com">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 RampATM Merchant Services, Inc. All rights reserved. Genius App is a product of <a href="https://rampatm.com/" target="_blank" rel="noopener noreferrer">RampATM Merchant Services, Inc.</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const form     = document.getElementById('deletion-form');
+    const emailEl  = document.getElementById('email');
+    const errorEl  = document.getElementById('email-error');
+    const checkbox = document.getElementById('confirm');
+    const submitBtn = document.getElementById('submit-btn');
+    const formView = document.getElementById('form-view');
+    const successView = document.getElementById('success-view');
+    const successEmail = document.getElementById('success-email');
+
+    function isValidEmail(val) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
+    }
+
+    function updateSubmitState() {
+      submitBtn.disabled = !(isValidEmail(emailEl.value) && checkbox.checked);
+    }
+
+    emailEl.addEventListener('input', function () {
+      errorEl.classList.remove('visible');
+      emailEl.classList.remove('error');
+      updateSubmitState();
+    });
+
+    emailEl.addEventListener('blur', function () {
+      if (emailEl.value && !isValidEmail(emailEl.value)) {
+        emailEl.classList.add('error');
+        errorEl.classList.add('visible');
+      }
+    });
+
+    checkbox.addEventListener('change', updateSubmitState);
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (!isValidEmail(emailEl.value)) {
+        emailEl.classList.add('error');
+        errorEl.classList.add('visible');
+        emailEl.focus();
+        return;
+      }
+
+      const email = emailEl.value.trim();
+
+      // Loading state
+      submitBtn.classList.add('loading');
+      submitBtn.disabled = true;
+      submitBtn.querySelector('.btn-label').textContent = 'Submitting request…';
+
+      // Mock API call
+      setTimeout(function () {
+        submitBtn.classList.remove('loading');
+        successEmail.textContent = email;
+        formView.style.display = 'none';
+        successView.classList.add('visible');
+      }, 1800);
+    });
+  </script>
+
+</body>
+</html>
