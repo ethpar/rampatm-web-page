@@ -250,7 +250,7 @@ strong { color: var(--text); font-weight: 600; }
   color: var(--text);
 }
 
-.form-group input[type="email"] {
+.form-group input {
   width: 100%;
   padding: .65rem .85rem;
   font-size: .95rem;
@@ -263,16 +263,16 @@ strong { color: var(--text); font-weight: 600; }
   transition: border-color .15s, box-shadow .15s;
 }
 
-.form-group input[type="email"]::placeholder {
+.form-group input::placeholder {
   color: var(--text-faint);
 }
 
-.form-group input[type="email"]:focus {
+.form-group input:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(29, 78, 216, .1);
 }
 
-.form-group input[type="email"].error {
+.form-group input.error {
   border-color: var(--red);
   box-shadow: 0 0 0 3px rgba(220, 38, 38, .1);
 }
