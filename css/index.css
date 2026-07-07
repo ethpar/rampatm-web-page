@@ -18,6 +18,8 @@
     --bs-btn-hover-border-color: #750014;
     --bs-btn-active-bg: #750014;
     --bs-btn-active-border-color: #750014;
+    --bs-btn-disabled-bg: #750014;
+    --bs-btn-disabled-border-color: #750014;
 }
 
 .btn-outline-primary {

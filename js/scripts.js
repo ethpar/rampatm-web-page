@@ -33,78 +33,49 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // Contact form handler
     document
         .getElementById('contactForm')
-        .addEventListener('submit', function (e) {
+        .addEventListener('submit', async function (e) {
             e.preventDefault()
 
             const name = document.getElementById('name').value.trim()
             const email = document.getElementById('email').value.trim()
             const phone = document.getElementById('phone').value.trim()
+            const contact = `${email} | ${phone}`
             const message = document.getElementById('message').value.trim()
-
-            const subject = encodeURIComponent('New Contact Form Submission')
-            const body = encodeURIComponent(
-                `Name: ${name}
-Phone: ${phone}
-Email: ${email}
-Message:
-${message}`
-            )
-
-            const to = 'info@rampatm.com'
-            const mailtoUrl = `mailto:${to}?subject=${subject}&body=${body}`
 
             // Show progress spinner on the submit button
             const submitBtn = document.getElementById('submitButton')
             const originalBtnText = submitBtn.innerHTML
             submitBtn.disabled = true
             submitBtn.innerHTML =
-                '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Opening email app…'
+                '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending…'
 
-            // Track whether the browser navigated away (mail client opened)
-            let mailClientOpened = false
+            const response = await fetch(
+                'https://ibm7bagudkufu6snu7ulxfpliu0oamdl.lambda-url.us-east-1.on.aws/',
+                {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        name,
+                        contact,
+                        notes: message
+                    }),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }
+            )
 
-            const onBlur = () => {
-                mailClientOpened = true
-            }
-            window.addEventListener('blur', onBlur)
+            submitBtn.innerHTML = "Request Sent"
 
-            window.location.href = mailtoUrl
-
-            // If the window hasn't lost focus after a short delay,
-            // assume no mail client is available and show a fallback modal
             setTimeout(() => {
-                window.removeEventListener('blur', onBlur)
-
-                // Restore submit button
                 submitBtn.disabled = false
                 submitBtn.innerHTML = originalBtnText
 
-                if (!mailClientOpened) {
-                    // Dismiss the contact form modal first
-                    const contactModalEl =
-                        document.getElementById('feedbackModal')
-                    const contactModal =
-                        bootstrap.Modal.getInstance(contactModalEl)
-                    if (contactModal) {
-                        contactModal.hide()
-                    }
-
-                    // Wait for the contact modal to fully close before showing fallback
-                    contactModalEl.addEventListener(
-                        'hidden.bs.modal',
-                        function showFallback() {
-                            contactModalEl.removeEventListener(
-                                'hidden.bs.modal',
-                                showFallback
-                            )
-                            const fallbackModal = new bootstrap.Modal(
-                                document.getElementById('mailFallbackModal')
-                            )
-                            fallbackModal.show()
-                        }
-                    )
+                const contactModalEl = document.getElementById('feedbackModal')
+                const contactModal = bootstrap.Modal.getInstance(contactModalEl)
+                if (contactModal) {
+                    contactModal.hide()
                 }
-            }, 1500)
+            }, 2000)
         })
 
     // Copy email address button in fallback modal
