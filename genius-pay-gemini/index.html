@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Genius Pay — Multimodal Settlement Infrastructure for Banks</title>
+        <meta name="description" content="Genius Pay bridges tier-1 core banking systems with GENIUS Act Payment Stablecoin rails. Real-time settlement, zero custody, institutional grade." />
+        
+        <!-- Gemini Sparkle Favicon -->
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 2C16 10 22 16 30 16C22 16 16 22 16 30C16 22 10 16 2 16C10 16 16 10 16 2Z' fill='%2338bdf8'/></svg>" />
+        
+        <!-- Google Fonts: Plus Jakarta Sans + Space Mono -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="bg-grid"></div>
+        <div class="gemini-ambient"></div>
+
+        <!-- ================= Navigation ================= -->
+        <nav class="nav">
+            <div class="wrap nav-inner">
+                <a class="brand" href="#top">
+                    <span class="brand-sparkle">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C12 7.52285 16.4772 12 22 12C16.4772 12 12 16.4772 12 22C12 16.4772 7.52285 12 2 12C7.52285 12 12 7.52285 12 2Z" fill="url(#gem-sparkle-grad)" />
+                            <defs>
+                                <linearGradient id="gem-sparkle-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#60A5FA"/>
+                                    <stop offset="0.5" stop-color="#C084FC"/>
+                                    <stop offset="1" stop-color="#38BDF8"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </span>
+                    Genius Pay
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="#overview">Architecture</a></li>
+                    <li><a href="#banks">For Banks</a></li>
+                    <li><a href="#network">PSC Protocol</a></li>
+                    <li><a href="#pipeline">Settlement Stream</a></li>
+                    <li><a href="mailto:contact@ethpar.com">Developers</a></li>
+                </ul>
+
+                <a class="btn btn-primary" href="mailto:contact@ethpar.com">Connect Infrastructure</a>
+                <button class="nav-toggle">Menu</button>
+            </div>
+        </nav>
+
+        <!-- ================= Hero Section ================= -->
+        <header class="hero" id="top">
+            <div class="wrap">
+                <div class="hero-pill">
+                    <span class="pill-glow">
+                        <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                    </span>
+                    <span>GENIUS Act Compliant &middot; Next-Gen Interbank Network</span>
+                </div>
+
+                <h1>
+                    Next-generation <span class="text-gradient">liquidity &amp; settlement</span> for modern banks.
+                </h1>
+
+                <p class="hero-sub">
+                    Genius Pay upgrades existing core banking, debit, and ATM rails into instant, cryptographically verified Payment Stablecoin conduits. Zero balance-sheet custody risk. Built to the federal GENIUS Act standard.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a class="btn btn-primary" href="mailto:contact@ethpar.com">Deploy Bank Integration</a>
+                    <a class="btn btn-secondary" href="#overview">Explore Rail Architecture</a>
+                </div>
+
+                <!-- Interactive SVG / Visual Node Representation -->
+                <div class="hero-visual">
+                    <svg viewBox="0 0 1000 380" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto;">
+                        <defs>
+                            <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.2"/>
+                                <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.9"/>
+                                <stop offset="100%" stop-color="#A855F7" stop-opacity="0.8"/>
+                            </linearGradient>
+                            <linearGradient id="pulseGlow" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Background Grid Nodes -->
+                        <g opacity="0.3">
+                            <line x1="50" y1="190" x2="950" y2="190" stroke="#334155" stroke-dasharray="4 8"/>
+                            <line x1="250" y1="60" x2="250" y2="320" stroke="#1E293B" stroke-dasharray="2 4"/>
+                            <line x1="500" y1="60" x2="500" y2="320" stroke="#1E293B" stroke-dasharray="2 4"/>
+                            <line x1="750" y1="60" x2="750" y2="320" stroke="#1E293B" stroke-dasharray="2 4"/>
+                        </g>
+
+                        <!-- Main Synapse Waves -->
+                        <path d="M 60 190 C 180 80, 320 80, 500 190 C 680 300, 820 300, 940 190" stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M 60 190 C 200 280, 340 280, 500 190 C 660 100, 800 100, 940 190" stroke="#60A5FA" stroke-width="1.5" stroke-opacity="0.4" stroke-dasharray="6 6"/>
+
+                        <!-- Left Node: Core Bank Rails -->
+                        <g transform="translate(120, 190)">
+                            <rect x="-80" y="-55" width="160" height="110" rx="16" fill="#0B132B" stroke="#1E293B" stroke-width="1.5"/>
+                            <circle cx="0" cy="-15" r="18" fill="rgba(59, 130, 246, 0.15)" stroke="#3B82F6" stroke-width="1.5"/>
+                            <path d="M-6 -15h12M0 -21v12" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round"/>
+                            <text x="0" y="24" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="13" fill="#F8FAFC">Core Banking</text>
+                            <text x="0" y="40" text-anchor="middle" font-family="Space Mono, monospace" font-size="10" fill="#64748B">ACH &middot; FedNow &middot; Debit</text>
+                        </g>
+
+                        <!-- Center Node: Genius Pay Synthesis Engine -->
+                        <g transform="translate(500, 190)">
+                            <circle cx="0" cy="0" r="65" fill="#030712" stroke="url(#gem-sparkle-grad)" stroke-width="2.5"/>
+                            <circle cx="0" cy="0" r="85" fill="none" stroke="#38BDF8" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 6"/>
+                            <!-- Inner Quantum Star -->
+                            <path d="M 0 -24 C 0 -6, 6 0, 24 0 C 6 0, 0 6, 0 24 C 0 6, -6 0, -24 0 C -6 0, 0 -6, 0 -24 Z" fill="url(#gem-sparkle-grad)"/>
+                            <text x="0" y="42" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="13" fill="#F8FAFC" letter-spacing="1">GENIUS PAY</text>
+                            <text x="0" y="56" text-anchor="middle" font-family="Space Mono, monospace" font-size="9" fill="#38BDF8">SYNAPSE PROTOCOL</text>
+                        </g>
+
+                        <!-- Right Node: On-Chain PSC Finality -->
+                        <g transform="translate(860, 190)">
+                            <rect x="-80" y="-55" width="160" height="110" rx="16" fill="#0B132B" stroke="#1E293B" stroke-width="1.5"/>
+                            <circle cx="0" cy="-15" r="18" fill="rgba(168, 85, 247, 0.15)" stroke="#A855F7" stroke-width="1.5"/>
+                            <path d="M-8 -15L-2 -9L8 -19" stroke="#C084FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <text x="0" y="24" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="13" fill="#F8FAFC">Ethpar PSC L1</text>
+                            <text x="0" y="40" text-anchor="middle" font-family="Space Mono, monospace" font-size="10" fill="#64748B">T+0 Native Finality</text>
+                        </g>
+
+                        <!-- Real-time Packet Pulses -->
+                        <circle cx="310" cy="135" r="4" fill="#38BDF8">
+                            <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="680" cy="245" r="4" fill="#C084FC">
+                            <animate attributeName="opacity" values="0.2;1;0.2" dur="2.4s" repeatCount="indefinite"/>
+                        </circle>
+                    </svg>
+
+                    <!-- Realtime Data Metrics Strip -->
+                    <div class="metrics-strip">
+                        <div class="metric-card">
+                            <span class="metric-tag">Finality latency</span>
+                            <span class="metric-val text-gradient">84ms</span>
+                            <span class="metric-desc">Sub-second atomic clearing</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-tag">Regulatory Standard</span>
+                            <span class="metric-val">GENIUS</span>
+                            <span class="metric-desc">Qualifies under 2025 Federal Act</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-tag">Custodial Overhead</span>
+                            <span class="metric-val text-gradient">$0.00</span>
+                            <span class="metric-desc">100% Non-custodial cryptographic flow</span>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-tag">Availability</span>
+                            <span class="metric-val">24/7/365</span>
+                            <span class="metric-desc">Eliminates legacy batch windows</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ================= Architecture Overview ================= -->
+        <section id="overview">
+            <div class="wrap">
+                <div class="sec-header">
+                    <span class="sec-tag">Unified Rail System</span>
+                    <h2 class="sec-title">Engineered to bypass intermediary taxes without disrupting compliance.</h2>
+                    <p class="sec-lead">
+                        Traditional card processing forces banks through 4–6 toll-collecting middle layers. Genius Pay re-routes clearing via high-throughput Ethpar Payment Stablecoins, keeping margin inside the institution.
+                    </p>
+                </div>
+
+                <div class="gemini-grid">
+                    <div class="grid-cell col-8">
+                        <div class="cell-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3 class="cell-title">Dual-Rail Architecture with Automatic Fallback</h3>
+                        <p class="cell-p">
+                            When an end-user swipes their bank debit card or conducts an interbank transfer, Genius Pay automatically prioritizes high-speed, zero-downgrade stablecoin rails. If a terminal or counterparty does not yet support PSC direct clearing, transactions seamlessly fall back to Visa/Mastercard networks. Zero disruption to customers, pure upside for the institution.
+                        </p>
+
+                        <div class="code-window">
+                            <div class="code-header">
+                                <span class="code-dot"></span>
+                                <span class="code-dot"></span>
+                                <span class="code-dot"></span>
+                                <span style="margin-left: 8px; color: #64748b;">settlement-evaluator.ts</span>
+                            </div>
+                            <div class="code-body">
+<span class="code-kw">const</span> routingDecision = <span class="code-kw">await</span> GeniusPay.<span class="code-prop">evaluateRoute</span>({
+  sourceBankId: <span class="code-val">"FED_ROUTING_021000089"</span>,
+  terminalCap: <span class="code-val">"GENIUS_ACT_PSC_V1"</span>,
+  settlementRail: <span class="code-val">"OPTIMAL_ETHPAR_PSC"</span>
+});
+<span class="code-com">// Result: 88% interchange reduction &middot; T+0 instant delivery</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-cell col-4">
+                        <div class="cell-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <h3 class="cell-title">Absolute Fiduciary Isolation</h3>
+                        <p class="cell-p">
+                            Genius Pay operates as a pure software protocol. We never take possession of, escrow, or commingle bank customer deposits. All reserves remain under FDIC-eligible bank custodianship while digital stablecoins move peer-to-peer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= For Banks Bento ================= -->
+        <section id="banks">
+            <div class="wrap">
+                <div class="sec-header">
+                    <span class="sec-tag">Bank Institutional Advantages</span>
+                    <h2 class="sec-title">Turn cost centers into proprietary payment networks.</h2>
+                </div>
+
+                <div class="gemini-grid">
+                    <div class="grid-cell col-4">
+                        <div class="cell-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+                        </div>
+                        <h3 class="cell-title">Protected Interchange Margins</h3>
+                        <p class="cell-p">
+                            Eliminate the multi-basis-point assessment fees extracted by legacy scheme operators. Your institution keeps the transaction value it creates.
+                        </p>
+                    </div>
+
+                    <div class="grid-cell col-4">
+                        <div class="cell-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <h3 class="cell-title">GENIUS Act Ready</h3>
+                        <p class="cell-p">
+                            Pre-configured to support only 100% reserve-backed Payment Stablecoins qualifying under the landmark Guiding and Establishing National Innovation for U.S. Stablecoins Act.
+                        </p>
+                    </div>
+
+                    <div class="grid-cell col-4">
+                        <div class="cell-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <h3 class="cell-title">Weekend &amp; Holiday Elimination</h3>
+                        <p class="cell-p">
+                            Never wait for ACH batches or central bank window closures. Liquidity positions refresh dynamically 365 days a year in continuous real-time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 3-Step Live Pipeline ================= -->
+        <section id="pipeline">
+            <div class="wrap">
+                <div class="sec-header">
+                    <span class="sec-tag">Execution Flow</span>
+                    <h2 class="sec-title">How a transaction clears in 100 milliseconds.</h2>
+                </div>
+
+                <div class="pipeline-steps">
+                    <div class="step-card">
+                        <span class="step-badge">Phase 01</span>
+                        <h3>Authorization &amp; Identity</h3>
+                        <p>
+                            Cardholder initiates tap or bank transfer. Existing KYC conducted by the issuing bank is cryptographically validated at the rail gate. No redundant identity steps.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-badge">Phase 02</span>
+                        <h3>Smart Routing Engine</h3>
+                        <p>
+                            Genius Pay inspects counterparty rail capability. The transaction is instantly matched to Ethpar L1 network channels for sub-100ms algorithmic verification.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <span class="step-badge">Phase 03</span>
+                        <h3>Atomic PSC Finality</h3>
+                        <p>
+                            Payment Stablecoins settle directly to merchant and issuer accounts with immutable, auditor-accessible ledger proofs. Funds clear without clawback or rollback exposure.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= Call to Action ================= -->
+        <section style="border-top: none; padding-top: 0;">
+            <div class="wrap">
+                <div class="cta-box">
+                    <h2>Deploy bank-grade stablecoin rails today.</h2>
+                    <p>
+                        Schedule an executive architectural briefing or review technical sandbox specifications for your core banking software.
+                    </p>
+                    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                        <a class="btn btn-primary" href="mailto:contact@ethpar.com">Request Integration Briefing</a>
+                        <a class="btn btn-secondary" href="mailto:contact@ethpar.com?subject=Genius%20Pay%20Sandbox%20Access">API Sandbox Access</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= Footer ================= -->
+        <footer>
+            <div class="wrap footer-inner">
+                <div class="footer-meta">
+                    &copy; 2026 Genius Pay &middot; Next-Gen Interbank PSC Network &middot; Powered by Ethpar L1
+                </div>
+
+                <div class="footer-nav">
+                    <a href="https://www.ethpar.com" target="_blank" rel="noopener noreferrer">Ethpar L1</a>
+                    <a href="mailto:contact@ethpar.com">Institutional Support</a>
+                    <a href="mailto:contact@ethpar.com">Security Disclosures</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

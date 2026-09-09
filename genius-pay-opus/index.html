@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23d97757'/><text x='16' y='23' font-family='Georgia, serif' font-style='italic' font-size='19' font-weight='bold' text-anchor='middle' fill='white'>G</text></svg>" />
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta
+            name="description"
+            content="Genius Pay — regulated settlement infrastructure for GENIUS Act Payment Stablecoins. Built for banks."
+        />
+        <title>Genius Pay — Stablecoin Settlement for Banks</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- ================= Nav ================= -->
+        <nav class="nav">
+            <div class="wrap nav-inner">
+                <a class="brand" href="#top">
+                    <span class="brand-mark">G</span>
+                    <span class="brand-name">Genius <em>Pay</em></span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#what">What we do</a></li>
+                    <li><a href="#banks">For banks</a></li>
+                    <li><a href="#fintechs">For fintechs</a></li>
+                    <li><a href="#how">How it works</a></li>
+                    <li><a href="mailto:contact@ethpar.com">Contact</a></li>
+                </ul>
+                <a class="btn btn-solid nav-cta" href="mailto:contact@ethpar.com"
+                    >Talk to our team</a
+                >
+                <button class="nav-toggle" id="navToggle">Menu</button>
+            </div>
+        </nav>
+
+        <!-- ================= Hero ================= -->
+        <header class="hero" id="top">
+            <div class="wrap">
+                <p class="badge reveal">Private pilot &middot; GENIUS Act ready</p>
+                <h1 class="reveal">
+                    Bring your bank into the
+                    <em>stablecoin economy.</em>
+                </h1>
+                <p class="lede reveal">
+                    Genius Pay is regulated settlement infrastructure for
+                    GENIUS Act Payment Stablecoins. Issue, redeem, and settle
+                    PSCs over the debit rails and core systems you already run
+                    — without custody, without a middleware tax.
+                </p>
+                <div class="hero-ctas reveal">
+                    <a class="btn btn-solid" href="mailto:contact@ethpar.com"
+                        >Talk to our team</a
+                    >
+                    <a class="btn btn-ghost" href="#how">See how it works</a>
+                </div>
+
+                <div class="hero-diagram reveal">
+                    <!-- Settlement arc diagram -->
+                    <svg viewBox="0 0 860 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: customer bank account, through Genius Pay, to on-chain settlement">
+                        <defs>
+                            <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+                                <circle cx="1.6" cy="1.6" r="1.6" fill="#e3e0d6" />
+                            </pattern>
+                        </defs>
+
+                        <rect x="30" y="20" width="800" height="280" fill="url(#grid)" opacity="0.55" rx="24" />
+
+                        <!-- Arc -->
+                        <path d="M 190 210 C 300 90, 560 90, 670 210" stroke="#d97757" stroke-width="2" stroke-dasharray="1 8" stroke-linecap="round" fill="none" />
+                        <circle cx="430" cy="118" r="5" fill="#d97757" />
+
+                        <!-- Left node: bank account -->
+                        <rect x="60" y="170" width="200" height="110" rx="16" fill="#ffffff" stroke="#d9d5c9" stroke-width="1.5" />
+                        <rect x="84" y="196" width="44" height="34" rx="6" stroke="#d97757" stroke-width="1.5" />
+                        <line x1="84" y1="213" x2="128" y2="213" stroke="#d97757" stroke-width="1.5" />
+                        <line x1="106" y1="196" x2="106" y2="230" stroke="#d97757" stroke-width="1.5" />
+                        <text x="146" y="210" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.5" fill="#a3a09a">EXISTING</text>
+                        <text x="84" y="262" font-family="Fraunces, Georgia, serif" font-size="19" font-style="italic" fill="#191817">Bank account</text>
+
+                        <!-- Right node: on-chain settlement -->
+                        <rect x="600" y="170" width="200" height="110" rx="16" fill="#ffffff" stroke="#d97757" stroke-width="1.5" />
+                        <circle cx="646" cy="212" r="19" stroke="#d97757" stroke-width="1.6" fill="none" />
+                        <text x="646" y="218" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="18" font-style="italic" fill="#d97757">$</text>
+                        <text x="676" y="210" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.5" fill="#a3a09a">ON-CHAIN</text>
+                        <text x="624" y="262" font-family="Fraunces, Georgia, serif" font-size="19" font-style="italic" fill="#191817">PSC settlement</text>
+
+                        <!-- Center label -->
+                        <rect x="356" y="146" width="148" height="34" rx="17" fill="#d97757" />
+                        <text x="430" y="168" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2" fill="#ffffff">GENIUS PAY</text>
+
+                        <text x="430" y="70" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2" fill="#a3a09a">T+0 &middot; ~100MS &middot; NON-CUSTODIAL</text>
+                    </svg>
+                </div>
+
+                <div class="chips-row reveal">
+                    <span>Built for</span>
+                    <span>Community banks</span>
+                    <span>Regional banks</span>
+                    <span>Credit unions</span>
+                    <span>Payment processors</span>
+                    <span>ATM networks</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- ================= Stats ================= -->
+        <div class="stats">
+            <div class="wrap stats-grid reveal">
+                <div class="stat">
+                    <div class="num"><span class="clay">GENIUS</span> Act</div>
+                    <div class="lbl">Compliant by design</div>
+                </div>
+                <div class="stat">
+                    <div class="num">T<span class="clay">+0</span></div>
+                    <div class="lbl">Instant on-chain settlement</div>
+                </div>
+                <div class="stat">
+                    <div class="num">~<span class="clay">100</span>ms</div>
+                    <div class="lbl">Authorization time</div>
+                </div>
+                <div class="stat">
+                    <div class="num"><span class="clay">0</span> custody</div>
+                    <div class="lbl">Funds never leave bank accounts</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= What we do ================= -->
+        <section id="what">
+            <div class="wrap sec-lead-grid">
+                <div class="reveal">
+                    <p class="sec-num">01. What we do</p>
+                    <p class="lead">
+                        We connect your core banking stack to on-chain
+                        settlement — without touching custody, charters, or
+                        compliance.
+                    </p>
+                </div>
+                <div class="body-text reveal">
+                    <p>
+                        Genius Pay routes stablecoin transactions through the
+                        core banking, card, and ATM infrastructure your
+                        institution already operates, and settles them
+                        instantly on-chain in regulated Payment Stablecoins.
+                    </p>
+                    <p>
+                        Only stablecoins that qualify under the GENIUS Act of
+                        2025 move across the network. Reserve backing,
+                        attestations, and auditability are properties of the
+                        rails themselves — not of a bolt-on report.
+                    </p>
+                    <p>
+                        The result: a new settlement business for your balance
+                        sheet, delivered over systems you already trust.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= For banks ================= -->
+        <section id="banks">
+            <div class="wrap">
+                <p class="sec-num reveal">02. For banks</p>
+                <h2 class="sec-title reveal">
+                    New revenue, from accounts you already hold.
+                </h2>
+
+                <div class="feat-rows">
+                    <div class="feat-row reveal">
+                        <span class="idx">/01</span>
+                        <h3>New revenue lines</h3>
+                        <p>
+                            Earn on PSC issuance, redemption, and transaction
+                            volume — interchange-grade economics without
+                            card-network intermediaries taking their cut.
+                        </p>
+                    </div>
+                    <div class="feat-row reveal">
+                        <span class="idx">/02</span>
+                        <h3>Compliance by construction</h3>
+                        <p>
+                            Every transaction travels on rails restricted to
+                            GENIUS Act stablecoins. KYC stays where it belongs:
+                            with the bank that issued the account.
+                        </p>
+                    </div>
+                    <div class="feat-row reveal">
+                        <span class="idx">/03</span>
+                        <h3>Zero custody risk</h3>
+                        <p>
+                            Genius Pay never holds customer funds. Stablecoins
+                            move directly between accounts via cryptographic
+                            authorization — your fiduciary posture stays intact.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= For fintechs ================= -->
+        <section id="fintechs">
+            <div class="wrap">
+                <p class="sec-num reveal">03. For fintechs &amp; processors</p>
+                <h2 class="sec-title reveal">
+                    Integrate once. Reach every connected bank.
+                </h2>
+
+                <div class="feat-rows">
+                    <div class="feat-row reveal">
+                        <span class="idx">/01</span>
+                        <h3>One integration, every bank</h3>
+                        <p>
+                            Connect to the network once. As banks join, your
+                            distribution grows automatically — no bilateral
+                            contracts, no re-integration.
+                        </p>
+                    </div>
+                    <div class="feat-row reveal">
+                        <span class="idx">/02</span>
+                        <h3>White-label by default</h3>
+                        <p>
+                            Present issuance and redemption as your own
+                            product. Genius Pay stays invisible behind your
+                            customer experience.
+                        </p>
+                    </div>
+                    <div class="feat-row reveal">
+                        <span class="idx">/03</span>
+                        <h3>APIs your engineers will like</h3>
+                        <p>
+                            Documented REST APIs for issuance, redemption, and
+                            settlement reporting. Sandbox to production in
+                            days, not quarters.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= How it works ================= -->
+        <section id="how" style="background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+            <div class="wrap sec-lead-grid">
+                <div class="reveal">
+                    <p class="sec-num">04. How it works</p>
+                    <h2 class="sec-title">
+                        Familiar on the outside. Faster underneath.
+                    </h2>
+                    <p class="body-text" style="margin-top: 24px; color: var(--muted);">
+                        Customers keep their existing debit cards and
+                        accounts. Your systems keep their existing rails. Only
+                        the settlement layer changes — and it changes
+                        everything.
+                    </p>
+                </div>
+                <div class="timeline reveal">
+                    <div class="tl-step">
+                        <span class="tl-dot">01</span>
+                        <h3>Authenticate</h3>
+                        <p>
+                            The customer presents a bank-issued debit card at
+                            any Genius Pay-enabled terminal or ATM. Identity
+                            checks are already complete — done by the issuing
+                            bank.
+                        </p>
+                    </div>
+                    <div class="tl-step">
+                        <span class="tl-dot">02</span>
+                        <h3>Route</h3>
+                        <p>
+                            The transaction travels to Genius Pay over existing
+                            payment rails. Where the network isn't available,
+                            it falls back to legacy processing without
+                            interruption.
+                        </p>
+                    </div>
+                    <div class="tl-step">
+                        <span class="tl-dot">03</span>
+                        <h3>Settle</h3>
+                        <p>
+                            Authorization returns in roughly 100 milliseconds.
+                            Settlement completes instantly in Payment
+                            Stablecoins on the Ethpar network — one immutable
+                            record for every party.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= Comparison ================= -->
+        <section id="compare">
+            <div class="wrap">
+                <p class="sec-num reveal">05. The difference</p>
+                <h2 class="sec-title reveal" style="margin-bottom: 8px;">
+                    Same charters. Faster money.
+                </h2>
+
+                <div class="cmp reveal">
+                    <div class="cmp-col legacy">
+                        <header>
+                            <h3>Legacy settlement</h3>
+                            <span class="cmp-tag">Status quo</span>
+                        </header>
+                        <div class="cmp-item">
+                            <span class="k">Settlement time</span>
+                            <span class="v">T+1 to T+3</span>
+                        </div>
+                        <div class="cmp-item">
+                            <span class="k">Availability</span>
+                            <span class="v">Banking hours</span>
+                        </div>
+                        <div class="cmp-item">
+                            <span class="k">Custody chain</span>
+                            <span class="v">3–5 intermediaries</span>
+                        </div>
+                        <div class="cmp-item">
+                            <span class="k">Auditability</span>
+                            <span class="v">Monthly reconciliation</span>
+                        </div>
+                        <div class="cmp-item">
+                            <span class="k">Stablecoin access</span>
+                            <span class="v">None natively</span>
+                        </div>
+                    </div>
+                    <div class="cmp-col genius">
+                        <header>
+                            <h3>Genius Pay</h3>
+                            <span class="cmp-tag">GENIUS Act rails</span>
+                        </header>
+                        <div class="cmp-item">
+                            <span class="k">Settlement time</span>
+                            <span class="v">Instant — T+0</span>
+                        </div>
+                        <div class="cmp-item">
+                            <span class="k">Availability</span>
+                            <span class="v">24/7/365</span>
+                        </div>
+                        <div class="cmp-item">
+                            <span class="k">Custody chain</span>
+                            <span class="v">Direct, non-custodial</span>
+                        </div>
+                        <div class="cmp-item">
+                            <span class="k">Auditability</span>
+                            <span class="v">On-chain, real-time</span>
+                        </div>
+                        <div class="cmp-item">
+                            <span class="k">Stablecoin access</span>
+                            <span class="v">Native PSC issuance &amp; redemption</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <div class="cta-band">
+            <div class="wrap">
+                <p class="sec-num reveal">06. Get started</p>
+                <h2 class="reveal">
+                    Ready to settle at the <em>speed of software?</em>
+                </h2>
+                <p class="reveal">
+                    Whether you run a community bank, a card program, or a
+                    payments platform — Genius Pay is built to meet you where
+                    you are. Let's talk.
+                </p>
+                <div class="hero-ctas reveal">
+                    <a class="btn btn-solid" href="mailto:contact@ethpar.com"
+                        >Talk to our team</a
+                    >
+                    <a
+                        class="btn btn-ghost"
+                        href="mailto:contact@ethpar.com?subject=Genius%20Pay%20Partnership"
+                        >Partnership inquiries</a
+                    >
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= Footer ================= -->
+        <footer>
+            <div class="wrap footer-row">
+                <p class="footer-copy">
+                    &copy; 2026 Genius Pay &middot; Payment Stablecoin
+                    settlement infrastructure &middot; Powered by the Ethpar
+                    network
+                </p>
+                <div class="footer-links">
+                    <a href="https://www.ethpar.com" target="_blank" rel="noopener noreferrer">Ethpar</a>
+                    <a href="mailto:contact@ethpar.com">Contact</a>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            var toggle = document.getElementById("navToggle");
+            var links = document.getElementById("navLinks");
+            toggle.addEventListener("click", function () {
+                links.classList.toggle("open");
+            });
+            links.addEventListener("click", function (e) {
+                if (e.target.tagName === "A") links.classList.remove("open");
+            });
+
+            var observer = new IntersectionObserver(
+                function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.12 }
+            );
+            document.querySelectorAll(".reveal").forEach(function (el) {
+                observer.observe(el);
+            });
+        </script>
+    </body>
+</html>
