@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Genius Pay — Design Showcase & Prototype Index</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23111827'/><circle cx='16' cy='16' r='6' fill='%2338bdf8'/></svg>" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+        <style>
+            :root {
+                --bg: #030712;
+                --card-bg: rgba(17, 24, 39, 0.7);
+                --border: rgba(255, 255, 255, 0.08);
+                --text: #f9fafb;
+                --text-muted: #9ca3af;
+                --sans: "Plus Jakarta Sans", sans-serif;
+                --mono: "Space Mono", monospace;
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background: var(--bg);
+                color: var(--text);
+                font-family: var(--sans);
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 60px 24px;
+                position: relative;
+                overflow-x: hidden;
+            }
+
+            /* Ambient grid background */
+            body::before {
+                content: "";
+                position: fixed;
+                inset: 0;
+                background-image: 
+                    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+                background-size: 36px 36px;
+                mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 80%);
+                -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 80%);
+                pointer-events: none;
+                z-index: -1;
+            }
+
+            .container {
+                max-width: 980px;
+                width: 100%;
+            }
+
+            header {
+                text-align: center;
+                margin-bottom: 54px;
+            }
+
+            .badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-family: var(--mono);
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 0.12em;
+                color: #38bdf8;
+                background: rgba(56, 189, 248, 0.08);
+                border: 1px solid rgba(56, 189, 248, 0.2);
+                padding: 6px 14px;
+                border-radius: 999px;
+                margin-bottom: 18px;
+            }
+
+            h1 {
+                font-size: clamp(32px, 4vw, 48px);
+                font-weight: 700;
+                letter-spacing: -0.03em;
+                margin-bottom: 12px;
+            }
+
+            p.subtitle {
+                color: var(--text-muted);
+                font-size: 16px;
+                max-width: 540px;
+                margin: 0 auto;
+                line-height: 1.6;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 20px;
+            }
+
+            .version-card {
+                background: var(--card-bg);
+                border: 1px solid var(--border);
+                border-radius: 18px;
+                padding: 28px 24px;
+                text-decoration: none;
+                color: inherit;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                backdrop-filter: blur(12px);
+                transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .version-card:hover {
+                transform: translateY(-4px);
+                border-color: rgba(255, 255, 255, 0.25);
+                box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+            }
+
+            .version-card::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                opacity: 0.8;
+            }
+
+            /* Theme accent lines */
+            .card-me::before { background: #c9f73a; }
+            .card-opus::before { background: #d97757; }
+            .card-fable::before { background: linear-gradient(90deg, #38bdf8, #8b5cf6, #f472b6); }
+            .card-gemini::before { background: linear-gradient(90deg, #60a5fa, #c084fc, #38bdf8); }
+
+            .card-top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 16px;
+            }
+
+            .card-pill {
+                font-family: var(--mono);
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                padding: 4px 10px;
+                border-radius: 999px;
+                border: 1px solid var(--border);
+                background: rgba(255, 255, 255, 0.03);
+            }
+
+            .card-me .card-pill { color: #c9f73a; border-color: rgba(201, 247, 58, 0.2); }
+            .card-opus .card-pill { color: #d97757; border-color: rgba(217, 119, 87, 0.2); }
+            .card-fable .card-pill { color: #c084fc; border-color: rgba(192, 132, 252, 0.2); }
+            .card-gemini .card-pill { color: #38bdf8; border-color: rgba(56, 189, 248, 0.2); }
+
+            .card-arrow {
+                color: var(--text-muted);
+                transition: transform 0.2s;
+            }
+
+            .version-card:hover .card-arrow {
+                transform: translateX(4px);
+                color: #fff;
+            }
+
+            .card-title {
+                font-size: 22px;
+                font-weight: 700;
+                letter-spacing: -0.02em;
+                margin-bottom: 8px;
+            }
+
+            .card-desc {
+                font-size: 14px;
+                color: var(--text-muted);
+                line-height: 1.6;
+                margin-bottom: 24px;
+            }
+
+            .card-meta {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-family: var(--mono);
+                font-size: 12px;
+                color: #64748b;
+                border-top: 1px solid rgba(255, 255, 255, 0.05);
+                padding-top: 14px;
+            }
+
+            .dot {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #34d399;
+            }
+
+            .back-link {
+                margin-top: 48px;
+                text-align: center;
+            }
+
+            .back-link a {
+                color: var(--text-muted);
+                font-size: 13.5px;
+                text-decoration: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                padding-bottom: 2px;
+                transition: all 0.2s;
+            }
+
+            .back-link a:hover {
+                color: #fff;
+                border-color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="badge">Internal Prototype Directory</div>
+                <h1>Genius Pay Concept Gallery</h1>
+                <p class="subtitle">Explore all four architectural design variants created for the Genius Pay bank settlement landing page.</p>
+            </header>
+
+            <div class="grid">
+                <!-- Colossus Dark/Lime -->
+                <a href="genius-pay-me/index.html" class="version-card card-me">
+                    <div>
+                        <div class="card-top">
+                            <span class="card-pill">Colossus Aesthetic</span>
+                            <span class="card-arrow">&rarr;</span>
+                        </div>
+                        <h2 class="card-title">Genius Pay (Original)</h2>
+                        <p class="card-desc">Dark fintech theme inspired by colossus.credit with electric lime accents, hairline borders, Space Grotesk typography, and debit-card SVG architecture.</p>
+                    </div>
+                    <div class="card-meta">
+                        <span class="dot"></span>
+                        <span>/genius-pay-me/</span>
+                    </div>
+                </a>
+
+                <!-- Claude Opus -->
+                <a href="genius-pay-opus/index.html" class="version-card card-opus">
+                    <div>
+                        <div class="card-top">
+                            <span class="card-pill">Claude / Editorial</span>
+                            <span class="card-arrow">&rarr;</span>
+                        </div>
+                        <h2 class="card-title">Genius Pay (Opus)</h2>
+                        <p class="card-desc">Warm ivory editorial aesthetic with terracotta/clay accents, Fraunces serif headlines, numbered feature rows, timeline steps, and comparison matrix.</p>
+                    </div>
+                    <div class="card-meta">
+                        <span class="dot"></span>
+                        <span>/genius-pay-opus/</span>
+                    </div>
+                </a>
+
+                <!-- Fable -->
+                <a href="genius-pay-fable/index.html" class="version-card card-fable">
+                    <div>
+                        <div class="card-top">
+                            <span class="card-pill">Fable 5.1 / Aurora</span>
+                            <span class="card-arrow">&rarr;</span>
+                        </div>
+                        <h2 class="card-title">Genius Pay (Fable)</h2>
+                        <p class="card-desc">Deep indigo glassmorphism with drifting aurora orbs, Sora display typography, interactive cursor spotlight bento grids, and an animated planetary orbit core.</p>
+                    </div>
+                    <div class="card-meta">
+                        <span class="dot"></span>
+                        <span>/genius-pay-fable/</span>
+                    </div>
+                </a>
+
+                <!-- Gemini -->
+                <a href="genius-pay-gemini/index.html" class="version-card card-gemini">
+                    <div>
+                        <div class="card-top">
+                            <span class="card-pill">Gemini DeepMind</span>
+                            <span class="card-arrow">&rarr;</span>
+                        </div>
+                        <h2 class="card-title">Genius Pay (Gemini)</h2>
+                        <p class="card-desc">Technical deep-space black with coordinate grid, holographic cyan/violet gradients, Plus Jakarta Sans, live synapse SVG pipeline, and telemetry meters.</p>
+                    </div>
+                    <div class="card-meta">
+                        <span class="dot"></span>
+                        <span>/genius-pay-gemini/</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="back-link">
+                <a href="index.html">&larr; Return to RampATM Main Site</a>
+            </div>
+        </div>
+    </body>
+</html>
