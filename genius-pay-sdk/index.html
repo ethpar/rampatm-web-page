@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%2338bdf8'/><stop offset='.5' stop-color='%238b5cf6'/><stop offset='1' stop-color='%23f472b6'/></linearGradient></defs><circle cx='16' cy='16' r='16' fill='url(%23g)'/><circle cx='16' cy='16' r='7' fill='%230b1022'/></svg>" />
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta
+            name="description"
+            content="Genius Pay — Payment Stablecoin settlement for banks, plus SDKs that let any merchant and any third-party wallet accept and spend GENIUS Act stablecoins."
+        />
+        <title>Genius Pay — Stablecoin Settlement for Banks, Merchants &amp; Wallets</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="aurora"><span></span><span></span><span></span></div>
+
+        <!-- ================= Nav ================= -->
+        <nav class="nav">
+            <div class="wrap">
+                <div class="nav-inner">
+                    <a class="brand" href="#top">
+                        <span class="brand-mark"></span>
+                        Genius Pay
+                    </a>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="#banks">For Banks</a></li>
+                        <li><a href="#merchants">For Merchants</a></li>
+                        <li><a href="#wallets">For Wallets</a></li>
+                        <li><a href="#how">How it works</a></li>
+                    </ul>
+                    <a class="btn btn-grad nav-cta" href="mailto:contact@ethpar.com"
+                        >Get in touch</a
+                    >
+                    <button class="nav-toggle" id="navToggle">Menu</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ================= Hero ================= -->
+        <header class="hero" id="top">
+            <div class="wrap">
+                <p class="pill reveal"><b>New</b> Merchant &amp; Wallet SDKs now in private beta</p>
+                <h1 class="reveal">
+                    The settlement layer<br />
+                    <span class="grad-text">for banks, merchants and wallets.</span>
+                </h1>
+                <p class="lede reveal">
+                    Genius Pay lets banks issue and settle regulated Payment
+                    Stablecoins on the rails they already run — and gives
+                    merchants and third-party wallets the SDKs to accept and
+                    spend them anywhere. Instant. Non-custodial. GENIUS Act
+                    compliant on day one.
+                </p>
+                <div class="hero-ctas reveal">
+                    <a class="btn btn-grad" href="mailto:contact@ethpar.com"
+                        >Get in touch</a
+                    >
+                    <a class="btn btn-glass" href="#merchants">Explore the SDKs</a>
+                </div>
+
+                <div class="orbit reveal">
+                    <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Banks, merchants, wallets and ATMs orbiting the Genius Pay settlement core">
+                        <defs>
+                            <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#c4b5fd" />
+                                <stop offset="45%" stop-color="#8b5cf6" />
+                                <stop offset="100%" stop-color="#38bdf8" />
+                            </radialGradient>
+                            <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.55" />
+                                <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+                            </radialGradient>
+                        </defs>
+
+                        <circle cx="360" cy="200" r="180" fill="url(#coreGlow)" />
+                        <ellipse class="orbit-ring" cx="360" cy="200" rx="330" ry="150" />
+                        <ellipse class="orbit-ring dashed" cx="360" cy="200" rx="220" ry="100" />
+
+                        <g class="orbit-spin">
+                            <!-- Bank -->
+                            <g transform="translate(60 200)">
+                                <circle class="orbit-node" r="30" />
+                                <path d="M-11 8h22M-8 8V-2l8-6 8 6v10M-3 8v-5h6v5" stroke="#38bdf8" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <!-- Merchant -->
+                            <g transform="translate(660 200)">
+                                <circle class="orbit-node" r="30" />
+                                <rect x="-9" y="-11" width="18" height="22" rx="3" stroke="#34d399" stroke-width="1.6" fill="none" />
+                                <path d="M-5 -5h10M-5 -1h10M-5 3h6" stroke="#34d399" stroke-width="1.6" stroke-linecap="round" />
+                            </g>
+                            <!-- Wallet -->
+                            <g transform="translate(360 50)">
+                                <circle class="orbit-node" r="30" />
+                                <rect x="-11" y="-7" width="22" height="15" rx="3" stroke="#f472b6" stroke-width="1.6" fill="none" />
+                                <path d="M-11 -3h22" stroke="#f472b6" stroke-width="1.6" />
+                                <circle cx="6" cy="2" r="1.6" fill="#f472b6" />
+                            </g>
+                            <!-- ATM -->
+                            <g transform="translate(360 350)">
+                                <circle class="orbit-node" r="30" />
+                                <rect x="-8" y="-11" width="16" height="22" rx="3" stroke="#c4b5fd" stroke-width="1.6" fill="none" />
+                                <path d="M-4 -4h8M-4 0h8M-4 4h4" stroke="#c4b5fd" stroke-width="1.6" stroke-linecap="round" />
+                            </g>
+                        </g>
+
+                        <circle cx="360" cy="200" r="52" class="orbit-core" />
+                        <circle cx="360" cy="200" r="52" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1" />
+                        <text x="360" y="196" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="13" fill="#fff" letter-spacing="1">GENIUS</text>
+                        <text x="360" y="214" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="13" fill="#fff" letter-spacing="1">PAY</text>
+
+                        <text class="orbit-label" x="60" y="252" text-anchor="middle">BANKS</text>
+                        <text class="orbit-label" x="660" y="252" text-anchor="middle">MERCHANTS</text>
+                        <text class="orbit-label" x="360" y="100" text-anchor="middle">WALLETS</text>
+                        <text class="orbit-label" x="360" y="395" text-anchor="middle">ATMS</text>
+                    </svg>
+                </div>
+
+                <div class="stats reveal">
+                    <div class="stat">
+                        <div class="num grad-text">T+0</div>
+                        <div class="lbl">Instant on-chain settlement</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">~100ms</div>
+                        <div class="lbl">Authorization time</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">$0</div>
+                        <div class="lbl">Custody — funds never touch us</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num grad-text">2 SDKs</div>
+                        <div class="lbl">Merchant &amp; Wallet — one network</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ================= For banks ================= -->
+        <section id="banks">
+            <div class="wrap">
+                <div class="sec-head">
+                    <p class="kicker reveal">For banks</p>
+                    <h2 class="sec-title reveal">
+                        New revenue from the accounts you already hold.
+                    </h2>
+                    <p class="sec-desc reveal">
+                        Genius Pay runs alongside your existing card and deposit
+                        rails. Customers transact with the debit cards they
+                        already carry — you capture the stablecoin economics
+                        behind every swipe.
+                    </p>
+                </div>
+
+                <div class="bento">
+                    <div class="tile span-4 reveal">
+                        <div class="tile-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+                        </div>
+                        <h3>Interchange-grade economics, no network tax</h3>
+                        <p>
+                            Earn on PSC issuance, redemption and transaction
+                            volume. Because Genius Pay cuts card-network
+                            intermediaries out of the chain, more of every
+                            basis point stays on your balance sheet.
+                        </p>
+                        <div class="tile-tags">
+                            <span>issuance fees</span>
+                            <span>redemption spread</span>
+                            <span>volume share</span>
+                        </div>
+                    </div>
+                    <div class="tile span-2 reveal">
+                        <div class="tile-big-num grad-text">0</div>
+                        <h3>Custody risk</h3>
+                        <p>
+                            Stablecoins move directly between accounts via
+                            cryptographic authorization. We never hold funds.
+                        </p>
+                    </div>
+                    <div class="tile span-2 reveal">
+                        <div class="tile-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </div>
+                        <h3>Compliance by construction</h3>
+                        <p>
+                            Only GENIUS Act Payment Stablecoins move on the
+                            network. Reserves, attestations and audit trails are
+                            properties of the rails.
+                        </p>
+                    </div>
+                    <div class="tile span-2 reveal">
+                        <div class="tile-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M8 15h3"/></svg>
+                        </div>
+                        <h3>Same cards, same core</h3>
+                        <p>
+                            No re-issuance, no new core banking modules. A
+                            configuration change, not a migration.
+                        </p>
+                    </div>
+                    <div class="tile span-2 reveal">
+                        <div class="tile-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                        </div>
+                        <h3>Always-on settlement</h3>
+                        <p>
+                            No cut-off times, no batch windows. Money moves on
+                            weekends and holidays like any other day.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= For merchants ================= -->
+        <section id="merchants" style="padding-top: 0;">
+            <div class="wrap split">
+                <div>
+                    <p class="kicker reveal">For merchants</p>
+                    <h2 class="sec-title reveal">
+                        Accept stablecoins<br />with one SDK.
+                    </h2>
+                    <p class="sec-desc reveal">
+                        The Genius Pay Merchant SDK lets any point of sale,
+                        e-commerce checkout or ATM accept GENIUS Act Payment
+                        Stablecoins from any card or wallet on the network.
+                        Funds settle to your account instantly — no
+                        chargebacks, no T+2 float, no new hardware.
+                    </p>
+                    <ul class="check-list reveal">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+                            Works on existing terminals — a software update for Genmega, PAI, Clover and Pax estates
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+                            Accept debit-card taps and wallet QR scans through the same API
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+                            Settle to a PSC account or auto-sweep to fiat — your choice, T+0 either way
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+                            Cryptographic finality — no disputes, no reversals, no chargeback fees
+                        </li>
+                    </ul>
+                    <div class="platforms reveal">
+                        <span>Android POS</span>
+                        <span>iOS</span>
+                        <span>Web / JS</span>
+                        <span>REST</span>
+                        <span>Webhooks</span>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <div class="sdk-tabs" data-tabs="merchant">
+                        <button class="active" data-pane="m-js">JavaScript</button>
+                        <button data-pane="m-kotlin">Kotlin</button>
+                        <button data-pane="m-rest">REST</button>
+                    </div>
+                    <div class="terminal">
+                        <div class="terminal-bar">
+                            <i></i><i></i><i></i>
+                            <span>@genius-pay/merchant</span>
+                        </div>
+<pre class="sdk-pane active" id="m-js"><span class="k">import</span> { GeniusMerchant } <span class="k">from</span> <span class="s">"@genius-pay/merchant"</span>;
+
+<span class="k">const</span> pos = <span class="k">new</span> GeniusMerchant({ <span class="k">terminalId</span>: <span class="s">"TER_0412"</span> });
+
+<span class="c">// Show a charge — accepts card tap or wallet scan</span>
+<span class="k">const</span> charge = <span class="k">await</span> pos.<span class="s">createCharge</span>({
+  <span class="k">amount</span>:   <span class="n">48.50</span>,
+  <span class="k">asset</span>:    <span class="s">"PSC-USD"</span>,
+  <span class="k">settleTo</span>: <span class="s">"fiat"</span>          <span class="c">// or "psc"</span>
+});
+
+charge.<span class="s">on</span>(<span class="s">"settled"</span>, tx =&gt; {
+  <span class="c">// { status: "settled", finality: "T+0", fee: 0.17 }</span>
+});</pre>
+<pre class="sdk-pane" id="m-kotlin"><span class="k">val</span> pos = GeniusMerchant(terminalId = <span class="s">"TER_0412"</span>)
+
+<span class="k">val</span> charge = pos.<span class="s">createCharge</span>(
+    amount   = <span class="n">48.50</span>,
+    asset    = Asset.<span class="s">PSC_USD</span>,
+    settleTo = Settle.<span class="s">FIAT</span>
+)
+
+charge.<span class="s">onSettled</span> { tx -&gt;
+    <span class="c">// tx.finality == "T+0"</span>
+}</pre>
+<pre class="sdk-pane" id="m-rest"><span class="c">POST /v1/charges</span>
+{
+  <span class="k">"terminal_id"</span>: <span class="s">"TER_0412"</span>,
+  <span class="k">"amount"</span>:      <span class="n">48.50</span>,
+  <span class="k">"asset"</span>:       <span class="s">"PSC-USD"</span>,
+  <span class="k">"settle_to"</span>:   <span class="s">"fiat"</span>
+}
+
+<span class="c">// 201 Created · 91ms</span>
+{
+  <span class="k">"id"</span>:       <span class="s">"chg_01J8…"</span>,
+  <span class="k">"status"</span>:   <span class="s">"settled"</span>,
+  <span class="k">"finality"</span>: <span class="s">"T+0"</span>,
+  <span class="k">"tx_hash"</span>:  <span class="s">"0x4b7f…c019"</span>
+}</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= For wallets ================= -->
+        <section id="wallets" style="padding-top: 0;">
+            <div class="wrap split flip">
+                <div>
+                    <p class="kicker reveal">For wallets</p>
+                    <h2 class="sec-title reveal">
+                        Let any wallet spend<br />stablecoins in the real world.
+                    </h2>
+                    <p class="sec-desc reveal">
+                        The Genius Pay Wallet SDK plugs into any third-party
+                        wallet — custodial or self-custodial — and gives its
+                        users tap-to-pay at every terminal on the network and
+                        cash-out at Genius Pay ATMs. Keys stay where they are.
+                        We never touch funds.
+                    </p>
+                    <ul class="check-list reveal">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+                            NFC tap-to-pay and QR scan-to-pay at any Genius Pay-enabled merchant
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+                            Cash-out to fiat at thousands of ATMs nationwide
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+                            Bring your own signer — passkeys, secure enclave, MPC or hardware
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+                            Only GENIUS Act Payment Stablecoins — compliance handled by the rails, not by you
+                        </li>
+                    </ul>
+                    <div class="platforms reveal">
+                        <span>Swift</span>
+                        <span>Kotlin</span>
+                        <span>React Native</span>
+                        <span>Flutter</span>
+                        <span>Web</span>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <div class="sdk-tabs" data-tabs="wallet">
+                        <button class="active" data-pane="w-swift">Swift</button>
+                        <button data-pane="w-kotlin">Kotlin</button>
+                        <button data-pane="w-rn">React Native</button>
+                    </div>
+                    <div class="terminal">
+                        <div class="terminal-bar">
+                            <i></i><i></i><i></i>
+                            <span>@genius-pay/wallet</span>
+                        </div>
+<pre class="sdk-pane active" id="w-swift"><span class="k">import</span> GeniusWallet
+
+<span class="k">let</span> genius = GeniusWallet(signer: PasskeySigner())
+
+<span class="c">// Tap-to-pay: sign a PSC release at the terminal</span>
+<span class="k">let</span> tx = <span class="k">try await</span> genius.<span class="s">authorizeTap</span>(
+    terminal: <span class="s">"TER_0412"</span>,
+    amount:   <span class="n">48.50</span>,
+    asset:    .<span class="s">pscUSD</span>
+)
+
+<span class="c">// tx.status == .settled · tx.latencyMs == 82</span></pre>
+<pre class="sdk-pane" id="w-kotlin"><span class="k">val</span> genius = GeniusWallet(signer = PasskeySigner())
+
+<span class="k">val</span> tx = genius.<span class="s">authorizeTap</span>(
+    terminal = <span class="s">"TER_0412"</span>,
+    amount   = <span class="n">48.50</span>,
+    asset    = Asset.<span class="s">PSC_USD</span>
+)
+
+<span class="c">// tx.status == Status.SETTLED</span></pre>
+<pre class="sdk-pane" id="w-rn"><span class="k">import</span> { GeniusWallet } <span class="k">from</span> <span class="s">"@genius-pay/wallet-react-native"</span>;
+
+<span class="k">const</span> genius = <span class="k">new</span> GeniusWallet({ <span class="k">signer</span>: passkey });
+
+<span class="k">const</span> tx = <span class="k">await</span> genius.<span class="s">authorizeTap</span>({
+  <span class="k">terminal</span>: <span class="s">"TER_0412"</span>,
+  <span class="k">amount</span>:   <span class="n">48.50</span>,
+  <span class="k">asset</span>:    <span class="s">"PSC-USD"</span>
+});
+
+<span class="c">// → { status: "settled", finality: "T+0", latency_ms: 82 }</span></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrap">
+                <div class="sdk-grid">
+                    <div class="tile reveal">
+                        <div class="tile-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M9 7h6M9 11h6M9 15h3"/></svg>
+                        </div>
+                        <h3>One network, both sides</h3>
+                        <p>
+                            Every wallet on the Wallet SDK can pay every
+                            merchant on the Merchant SDK — and every bank card
+                            works at both. No bilateral integrations.
+                        </p>
+                    </div>
+                    <div class="tile reveal">
+                        <div class="tile-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/></svg>
+                        </div>
+                        <h3>Non-custodial by design</h3>
+                        <p>
+                            The SDKs coordinate authorization and settlement.
+                            They never hold keys or balances — funds move
+                            directly between bank, merchant and wallet.
+                        </p>
+                    </div>
+                    <div class="tile reveal">
+                        <div class="tile-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg>
+                        </div>
+                        <h3>Sandbox in minutes</h3>
+                        <p>
+                            Test keys, a simulated terminal and a funded test
+                            wallet ship with every SDK. Go from install to
+                            first settled transaction the same afternoon.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= How it works ================= -->
+        <section id="how">
+            <div class="wrap">
+                <div class="sec-head center">
+                    <p class="kicker reveal">How it works</p>
+                    <h2 class="sec-title reveal">
+                        Familiar on the outside.<br />Faster underneath.
+                    </h2>
+                    <p class="sec-desc reveal">
+                        Card or wallet, the customer experience is what it is
+                        today. Only the settlement layer changes.
+                    </p>
+                </div>
+
+                <div class="process">
+                    <div class="proc reveal">
+                        <div class="proc-num">1</div>
+                        <h3>Tap or scan</h3>
+                        <p>
+                            The customer taps a bank-issued debit card or scans
+                            with a wallet running the Wallet SDK at any merchant
+                            running the Merchant SDK.
+                        </p>
+                        <div class="latency">// identity: issuer or wallet signer</div>
+                    </div>
+                    <div class="proc reveal">
+                        <div class="proc-num">2</div>
+                        <h3>Route</h3>
+                        <p>
+                            The transaction travels to Genius Pay over existing
+                            payment rails. Where the network isn't available, it
+                            falls back to legacy processing seamlessly.
+                        </p>
+                        <div class="latency">// fallback: automatic</div>
+                    </div>
+                    <div class="proc reveal">
+                        <div class="proc-num">3</div>
+                        <h3>Settle</h3>
+                        <p>
+                            Authorization returns in ~100ms. Payment Stablecoins
+                            settle on the Ethpar network — bank, merchant and
+                            wallet all see one immutable record.
+                        </p>
+                        <div class="latency">// finality: T+0</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <div class="cta">
+            <div class="wrap">
+                <div class="cta-card reveal">
+                    <h2>
+                        Ready to settle at the
+                        <span class="grad-text">speed of software?</span>
+                    </h2>
+                    <p>
+                        Banks, merchants, acquirers and wallet teams — integrate
+                        once to reach the whole network.
+                    </p>
+                    <div class="hero-ctas">
+                        <a class="btn btn-grad" href="mailto:contact@ethpar.com"
+                            >Get in touch</a
+                        >
+                        <a
+                            class="btn btn-glass"
+                            href="mailto:contact@ethpar.com?subject=Genius%20Pay%20SDK%20Access"
+                            >Request SDK access</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= Footer ================= -->
+        <footer>
+            <div class="wrap footer-row">
+                <p class="footer-copy">
+                    &copy; 2026 Genius Pay &middot; Payment Stablecoin
+                    settlement infrastructure &middot; Powered by the Ethpar
+                    network
+                    <a href="../genius-pay-versions.html" title="Versions" style="opacity: 0.15; margin-left: 6px; font-size: 10px; text-decoration: none;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.15'">&#9670;</a>
+                </p>
+                <div class="footer-links">
+                    <a href="#merchants">Merchant SDK</a>
+                    <a href="#wallets">Wallet SDK</a>
+                    <a href="https://www.ethpar.com" target="_blank" rel="noopener noreferrer">Ethpar</a>
+                    <a href="mailto:contact@ethpar.com">Contact</a>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            var toggle = document.getElementById("navToggle");
+            var links = document.getElementById("navLinks");
+            toggle.addEventListener("click", function () {
+                links.classList.toggle("open");
+            });
+            links.addEventListener("click", function (e) {
+                if (e.target.tagName === "A") links.classList.remove("open");
+            });
+
+            var observer = new IntersectionObserver(
+                function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.12 }
+            );
+            document.querySelectorAll(".reveal").forEach(function (el) {
+                observer.observe(el);
+            });
+
+            document.querySelectorAll(".tile").forEach(function (tile) {
+                tile.addEventListener("mousemove", function (e) {
+                    var r = tile.getBoundingClientRect();
+                    tile.style.setProperty("--mx", e.clientX - r.left + "px");
+                    tile.style.setProperty("--my", e.clientY - r.top + "px");
+                });
+            });
+
+            document.querySelectorAll(".sdk-tabs").forEach(function (tabs) {
+                var terminal = tabs.nextElementSibling;
+                tabs.addEventListener("click", function (e) {
+                    var btn = e.target.closest("button");
+                    if (!btn) return;
+                    tabs.querySelectorAll("button").forEach(function (b) {
+                        b.classList.toggle("active", b === btn);
+                    });
+                    terminal.querySelectorAll(".sdk-pane").forEach(function (p) {
+                        p.classList.toggle("active", p.id === btn.dataset.pane);
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
