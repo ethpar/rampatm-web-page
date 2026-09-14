@@ -134,11 +134,12 @@
             }
 
             /* Theme accent lines */
-            .card-sdk::before { background: linear-gradient(90deg, #38bdf8, #8b5cf6, #34d399); }
+            .card-sdk::before { background: linear-gradient(90deg, #0d2340, #12909b, #6fb33b); }
             .card-me::before { background: #c9f73a; }
             .card-opus::before { background: #d97757; }
             .card-fable::before { background: linear-gradient(90deg, #38bdf8, #8b5cf6, #f472b6); }
             .card-gemini::before { background: linear-gradient(90deg, #60a5fa, #c084fc, #38bdf8); }
+            .card-mono::before { background: linear-gradient(90deg, #0a0a0a, #737373); }
 
             .card-top {
                 display: flex;
@@ -158,7 +159,8 @@
                 background: rgba(255, 255, 255, 0.03);
             }
 
-            .card-sdk .card-pill { color: #34d399; border-color: rgba(52, 211, 153, 0.3); }
+            .card-sdk .card-pill { color: #63bdc6; border-color: rgba(99, 189, 198, 0.3); }
+            .card-mono .card-pill { color: #d4d4d4; border-color: rgba(255, 255, 255, 0.2); }
             .card-me .card-pill { color: #c9f73a; border-color: rgba(201, 247, 58, 0.2); }
             .card-opus .card-pill { color: #d97757; border-color: rgba(217, 119, 87, 0.2); }
             .card-fable .card-pill { color: #c084fc; border-color: rgba(192, 132, 252, 0.2); }
@@ -231,11 +233,11 @@
             <header>
                 <div class="badge">Internal Prototype Directory</div>
                 <h1>Genius Pay Concept Gallery</h1>
-                <p class="subtitle">Explore all four architectural design variants created for the Genius Pay bank settlement landing page.</p>
+                <p class="subtitle">Explore all six architectural design variants created for the Genius Pay card-network landing page.</p>
             </header>
 
             <div class="grid">
-                <!-- Banks + Merchant SDK + Wallet SDK (Fable theme) -->
+                <!-- Banks + Merchant SDK + Wallet SDK (Kinective corporate theme) -->
                 <a href="genius-pay-sdk/index.html" class="version-card card-sdk">
                     <div>
                         <div class="card-top">
@@ -243,7 +245,7 @@
                             <span class="card-arrow">&rarr;</span>
                         </div>
                         <h2 class="card-title">Genius Pay (SDK)</h2>
-                        <p class="card-desc">Fable theme extended with For Merchants and For Wallets sections. Merchant SDK and Wallet SDK code samples with language tabs (JS / Kotlin / REST, Swift / Kotlin / React Native).</p>
+                        <p class="card-desc">Corporate navy/teal/green theme inspired by the Kinective pitch deck. IBM Plex typography, hairline borders, bento grid, and Merchant/Wallet SDK code samples with language tabs.</p>
                     </div>
                     <div class="card-meta">
                         <span class="dot"></span>
@@ -312,6 +314,22 @@
                     <div class="card-meta">
                         <span class="dot"></span>
                         <span>/genius-pay-gemini/</span>
+                    </div>
+                </a>
+
+                <!-- Mono / Colossus white -->
+                <a href="genius-pay-mono/index.html" class="version-card card-mono">
+                    <div>
+                        <div class="card-top">
+                            <span class="card-pill">Colossus Minimal</span>
+                            <span class="card-arrow">&rarr;</span>
+                        </div>
+                        <h2 class="card-title">Genius Pay (Mono)</h2>
+                        <p class="card-desc">Stark black-and-white minimalism in the style of colossus.credit. Inter typography, hairline borders, grayscale orbit visual, and a black code terminal.</p>
+                    </div>
+                    <div class="card-meta">
+                        <span class="dot"></span>
+                        <span>/genius-pay-mono/</span>
                     </div>
                 </a>
             </div>
